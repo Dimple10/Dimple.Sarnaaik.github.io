@@ -29,7 +29,7 @@ url: "https://Dimple.Sarnaaik.github.io" # the base hostname & protocol for your
 github_username:  Dimple10
 
 # Build settings
-theme: slate
+theme: minima
 #remote_theme: hydecorp/hydejack
 plugins:
   - jekyll-feed
