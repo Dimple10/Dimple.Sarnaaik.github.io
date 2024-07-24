@@ -1,3 +1,9 @@
+---
+layout: page
+title: Research
+permalink: /research/
+---
+
 Hunting Dark Matter Subhalos with Roman Space telescope
 
 The number of predicted DM subhalos vary from model to model. My research uses the basis of weak gravitational lensing signal set to be observed by the 
