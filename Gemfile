@@ -5,3 +5,5 @@ gem 'nokogiri'
 gem 'rack', '~> 2.2.4'
 gem 'rspec'
 # gem "rails"
+
+gem "jekyll", "~> 4.3"
