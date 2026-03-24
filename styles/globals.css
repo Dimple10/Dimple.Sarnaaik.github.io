@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #0d0d0d;
+  --bg-surface: #111111;
+  --border: #1e1e1e;
+  --border-accent: #2a2a2a;
+  --gold-bright: #c8a96e;
+  --gold-mid: #9a7a4a;
+  --gold-dim: #5c4a2a;
+  --text-primary: #f0e6c8;
+  --text-secondary: #9a8a6a;
+  --text-muted: #555555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-mid);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) var(--bg-secondary);
+}
+
+/* Font utility classes */
+.font-display {
+  font-family: var(--font-dm-serif), 'DM Serif Display', Georgia, serif;
+}
+
+.font-mono-ui {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', Consolas, monospace;
+}
+
+/* Section eyebrow */
+.eyebrow {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', Consolas, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold-bright);
+}
+
+/* Section border top */
+.section-border {
+  border-top: 1px solid var(--border);
+}
+
+/* Gold tag badge */
+.tag-gold {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', Consolas, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-bright);
+  border: 1px solid var(--gold-dim);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.tag-muted {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', Consolas, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-accent);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* Custom cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--gold-bright);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gold-mid);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring.expanded {
+  width: 48px;
+  height: 48px;
+}
+
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Starfield background */
+.starfield {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 60%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 35%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 80%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 15%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 50%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 85%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 10%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 55%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 90%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 30%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 45%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 70%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 40%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 25%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 70%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 90%, rgba(240, 230, 200, 0.05) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 55%, rgba(240, 230, 200, 0.05) 0%, transparent 100%);
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Gold text utility */
+.text-gold {
+  color: var(--gold-bright);
+}
+
+/* Hover gold effect */
+.hover-gold:hover {
+  color: var(--gold-bright);
+  transition: color 0.2s ease;
+}
+
+/* Card surface */
+.card-surface {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+
+.card-surface:hover {
+  border-color: var(--border-accent);
+}
+
+/* Animate radar polygon */
+@keyframes radar-pulse {
+  0%, 100% { transform: scale(0.98); }
+  50% { transform: scale(1.02); }
+}
+
+.radar-pulse {
+  animation: radar-pulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Timeline line */
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold-dim), transparent);
+}
