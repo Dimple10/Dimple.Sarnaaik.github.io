@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 const STATS = [
   { label: 'University', value: 'USC' },
   { label: 'Advisors', value: 'Kris Pardo & Andrew Benson' },
-  { label: 'Year', value: '4th Year PhD' },
+  { label: 'Year', value: '5th Year PhD Candidate' },
   { label: 'Location', value: 'Los Angeles, CA' },
 ]
 
@@ -129,13 +129,30 @@ export default function About() {
                   marginBottom: '20px',
                 }}
               >
-                I&apos;m a 4th year graduate student in the Department of Physics
+                I&apos;m a 5th year PhD candidate in the Department of Physics
                 &amp; Astronomy at the University of Southern California. My
-                research focuses on constraining Dark Matter models through
-                astrophysical methodologies. I work at the intersection of
-                theory, simulation, and observation — building forward models to
-                test how different dark matter candidates leave imprints on the
-                structure of the universe.
+                research focuses on constraining dark matter models through
+                astrophysical and computational methodologies — working at the
+                intersection of N-body simulations, semi-analytic modeling, and
+                observational forecasting.
+              </p>
+
+              <p
+                style={{
+                  fontSize: '15px',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.8,
+                  marginBottom: '20px',
+                }}
+              >
+                My primary research is with{' '}
+                <span style={{ color: 'var(--text-primary)' }}>
+                  Dr. Andrew Benson
+                </span>{' '}
+                at Carnegie Observatories, where I develop and calibrate
+                Galacticus — an open-source semi-analytic model of galaxy
+                formation — to beyond-CDM dark matter models using MCMC
+                sampling on large N-body simulation suites.
               </p>
 
               <p
@@ -146,15 +163,13 @@ export default function About() {
                   marginBottom: '32px',
                 }}
               >
-                I&apos;m advised by{' '}
+                I also work with{' '}
                 <span style={{ color: 'var(--text-primary)' }}>
                   Prof. Kris Pardo
                 </span>{' '}
-                at USC and{' '}
-                <span style={{ color: 'var(--text-primary)' }}>
-                  Dr. Andrew Benson
-                </span>{' '}
-                at Carnegie Observatories.
+                at USC, building forward-modeling pipelines to forecast
+                astrometric weak lensing signatures of dark matter subhalos in
+                mock Nancy Grace Roman Space Telescope data.
               </p>
 
               <div

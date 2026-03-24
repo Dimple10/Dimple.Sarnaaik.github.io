@@ -124,7 +124,7 @@ export default function Research() {
                     'translateY(0)'
                 }}
               >
-                {/* Project number */}
+                {/* Project number + group */}
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
@@ -132,10 +132,22 @@ export default function Research() {
                     textTransform: 'uppercase',
                     letterSpacing: '3px',
                     color: 'var(--gold-dim)',
-                    marginBottom: '16px',
+                    marginBottom: '8px',
                   }}
                 >
                   Project 0{i + 1} · {project.year}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-jetbrains), monospace',
+                    fontSize: '9px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '2px',
+                    color: 'var(--text-muted)',
+                    marginBottom: '16px',
+                  }}
+                >
+                  {project.group} · {project.institution}
                 </div>
 
                 {/* Title */}

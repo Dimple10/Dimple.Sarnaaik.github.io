@@ -142,24 +142,57 @@ export default function Publications() {
                   year={pub.year}
                   title={pub.title}
                   subtitle={`${pub.journal}${pub.authors ? ' · ' + pub.authors.join(', ') : ''}`}
-                  tags={[...pub.models, ...pub.techniques]}
-                  linkLabel={pub.arxiv ? 'arXiv' : undefined}
-                  linkHref={pub.arxiv ?? undefined}
+                  tags={pub.models.length > 0 ? [...pub.models, ...pub.techniques] : undefined}
+                  linkLabel={pub.arxiv ? 'arXiv' : pub.doi ? 'DOI' : undefined}
+                  linkHref={pub.arxiv ?? pub.doi ?? undefined}
                   extra={
-                    pub.journal === 'In preparation' ? (
-                      <div
-                        style={{
-                          fontFamily: 'var(--font-jetbrains), monospace',
-                          fontSize: '9px',
-                          textTransform: 'uppercase',
-                          letterSpacing: '2px',
-                          color: 'var(--gold-dim)',
-                          marginTop: '6px',
-                        }}
-                      >
-                        In preparation
-                      </div>
-                    ) : null
+                    <div style={{ marginTop: '6px' }}>
+                      {pub.type === 'peer-reviewed' && (
+                        <span
+                          style={{
+                            fontFamily: 'var(--font-jetbrains), monospace',
+                            fontSize: '9px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '2px',
+                            color: 'var(--gold-bright)',
+                            border: '1px solid var(--gold-dim)',
+                            padding: '2px 8px',
+                          }}
+                        >
+                          Peer Reviewed
+                        </span>
+                      )}
+                      {pub.type === 'in-preparation' && (
+                        <span
+                          style={{
+                            fontFamily: 'var(--font-jetbrains), monospace',
+                            fontSize: '9px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '2px',
+                            color: 'var(--text-muted)',
+                            border: '1px solid var(--border-accent)',
+                            padding: '2px 8px',
+                          }}
+                        >
+                          In Preparation
+                        </span>
+                      )}
+                      {pub.type === 'science-writing' && (
+                        <span
+                          style={{
+                            fontFamily: 'var(--font-jetbrains), monospace',
+                            fontSize: '9px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '2px',
+                            color: 'var(--text-muted)',
+                            border: '1px solid var(--border-accent)',
+                            padding: '2px 8px',
+                          }}
+                        >
+                          Science Writing
+                        </span>
+                      )}
+                    </div>
                   }
                 />
               </ScrollReveal>

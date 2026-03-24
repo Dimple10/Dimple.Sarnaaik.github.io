@@ -103,7 +103,7 @@ export default function Hero() {
             marginBottom: '28px',
           }}
         >
-          4th Year PhD · University of Southern California
+          5th Year PhD Candidate · University of Southern California
         </motion.div>
 
         <motion.p

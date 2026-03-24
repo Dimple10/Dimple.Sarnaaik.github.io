@@ -4,34 +4,48 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 
 const education = [
   {
-    degree: 'PhD Cosmology',
+    degree: 'Doctor of Philosophy, Astrophysics',
     institution: 'University of Southern California',
     period: '2021–Present',
-    details: 'Advisors: Kris Pardo & Andrew Benson (Carnegie Observatories)',
+    details: 'Primary advisor: Dr. Andrew Benson (Carnegie Observatories) · Co-advisor: Prof. Kris Pardo (USC)',
   },
   {
-    degree: "Bachelor's Degree",
-    institution: 'TODO: Fill in undergraduate institution',
-    period: 'TODO: Fill in years',
-    details: 'TODO: Fill in major/department',
+    degree: 'Bachelor of Science, Physics–Computer Science · Minor in Astronomy',
+    institution: 'University of Southern California',
+    period: '2017–2021',
+    details: 'GPA: 3.76 · Astronomy GPA: 3.9 · Dean\'s List 2017–2021',
   },
 ]
 
-// TODO: Fill in real skills, awards, and service
 const skills = [
-  { category: 'Languages', items: ['Python', 'C++', 'Mathematica'] },
-  { category: 'Frameworks', items: ['NumPy', 'SciPy', 'Astropy', 'emcee'] },
-  { category: 'Tools', items: ['Galacticus', 'CAMB', 'Git', 'HPC/Slurm'] },
-  { category: 'Techniques', items: ['MCMC', 'Power Spectra', 'Forward Modeling', 'N-body Analysis'] },
+  { category: 'Programming', items: ['Python', 'C++', 'Git', 'LaTeX'] },
+  { category: 'Computational', items: ['MCMC', 'Bayesian Analysis', 'N-body Simulations', 'HPC / Slurm', 'Big Data'] },
+  { category: 'Modeling', items: ['Galacticus', 'CLASS Code', 'Semi-analytic Modelling', 'Forward Modeling'] },
+  { category: 'Communication', items: ['Science Communication', 'Public Outreach', 'Technical Writing', 'Mentorship'] },
 ]
 
 const awards = [
-  { year: '2021', title: 'USC Provost Fellowship', details: 'TODO: Add details' },
-  // TODO: Add more awards
+  { year: '2025', title: 'Rockwell Dennis Hunt Scholastic Award ($5,000)', details: 'USC' },
+  { year: '2024', title: 'Galactic Leader Award', details: 'Cosmolab' },
+  { year: '2023–24', title: 'USC Dornsife Graduate Fellowship ($35,700)', details: 'USC Dornsife College' },
+  { year: '2023', title: 'Rockwell Dennis Hunt Scholastic Award, Honorable Mention ($1,000)', details: 'USC' },
+  { year: '2021–22', title: 'GSG Professional Development Fund Award ($500/year)', details: 'USC' },
+  { year: '2020–21', title: 'Goel Family Scholarship ($5,000)', details: 'USC Continuing Student Scholarship' },
+  { year: '2020', title: 'Summer Undergraduate Research Fund Award ($3,000)', details: 'USC' },
+  { year: '2019–21', title: 'Student Opportunity for Academic Research Award ($1,000/year)', details: 'USC' },
+  { year: '2018–20', title: 'Women in Science and Engineering Research Fellowship ($500/semester)', details: 'USC WiSE' },
+  { year: '2017–21', title: 'Dean\'s List', details: 'USC Dornsife College' },
 ]
 
 const service = [
-  { role: 'TODO: Fill in service roles', venue: 'e.g., reviewer, outreach, etc.' },
+  { role: 'Women+ in Physics (W+iP) — Co-Founder', venue: 'USC · 2024–Present' },
+  { role: 'Graduate Association of Students in Physics (GASP) — President', venue: 'USC · 2022–2024' },
+  { role: 'Teaching Assistant', venue: 'USC Department of Physics & Astronomy · Fall 2021–Present' },
+  { role: 'Skype a Scientist — Contributing Scientist', venue: '2023–2024, 2026' },
+  { role: 'Letter to a Pre-Scientist — STEM Pen Pal Volunteer', venue: '2023–2024' },
+  { role: 'Undergraduate Research Symposium — Judge, Physical Sciences', venue: 'USC · 2026' },
+  { role: 'The Lab Report, USC — Science Journalist / Contributing Author', venue: '2026–Present' },
+  { role: 'Society of Physics Students (SPS) — Co-President', venue: 'USC · 2019–2021' },
 ]
 
 export default function CV() {

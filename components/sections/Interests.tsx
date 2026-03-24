@@ -2,49 +2,42 @@
 
 import ScrollReveal from '@/components/ui/ScrollReveal'
 
-// TODO: Replace with Dimple's real interests. These are placeholder suggestions.
 const INTERESTS = [
   {
     icon: '◎',
-    title: 'Astronomy Outreach',
+    title: 'Women+ in Physics',
     description:
-      'Sharing the wonders of the cosmos with the public through events, star parties, and science communication.',
-    // TODO: Add specific outreach activities/organizations
-  },
-  {
-    icon: '◈',
-    title: 'Photography',
-    description:
-      'Capturing light — from landscapes to astrophotography, finding the sublime in long exposures.',
-    // TODO: Add specific photography interests/links
-  },
-  {
-    icon: '◇',
-    title: 'Hiking',
-    description:
-      'Exploring the trails around Los Angeles and Southern California — finding perspective under open skies.',
-    // TODO: Add favorite trails or locations
-  },
-  {
-    icon: '♩',
-    title: 'Music',
-    description:
-      'Listening and playing — music as a form of creativity and mental reset between long days of research.',
-    // TODO: Add specific music interests/instruments
+      'Co-founded USC\'s first organization dedicated to supporting women and gender minorities in physics. Initiated W+iP Clips — a science communication series highlighting gender minorities in the field.',
   },
   {
     icon: '⬡',
     title: 'Science Communication',
     description:
-      'Writing and talking about dark matter and cosmology for non-specialist audiences.',
-    // TODO: Add specific sci-comm activities
+      'Contributing author at The Lab Report (USC). Led live virtual sessions through Skype a Scientist for K–8 students on black holes, dark matter, and the Moon. APS StepUp panelist supporting high school physics teachers.',
   },
   {
     icon: '◉',
     title: 'Teaching & Mentoring',
     description:
-      'Supporting the next generation of physicists through TAing, tutoring, and informal mentoring.',
-    // TODO: Add specific teaching roles
+      'Teaching assistant for 5+ years across introductory to advanced physics and astronomy labs at USC. STEM pen pal through Letter to a Pre-Scientist with a 5th grader in North Carolina. Mentored 6 underclassmen through SPS.',
+  },
+  {
+    icon: '◇',
+    title: 'Community Building',
+    description:
+      'As GASP President, gathered 100+ student experiences to successfully petition a change in the PhD curriculum and hosted community events for 90+ graduate students. Led astronomy outreach at Foster Elementary School.',
+  },
+  {
+    icon: '◈',
+    title: 'Graduate Education Advocacy',
+    description:
+      'Advocate for inclusive and equitable graduate physics education — bringing student concerns directly to the department and creating systemic change in the PhD program at USC.',
+  },
+  {
+    icon: '♩',
+    title: 'Astronomy Across Barriers',
+    description:
+      'Authored "Astronomy across barriers" (The Lab Report, Vol. 2), profiling USC faculty efforts to bring astronomy to underserved communities. Passionate about making astrophysics accessible to everyone.',
   },
 ]
 
@@ -85,9 +78,9 @@ export default function Interests() {
               marginBottom: '52px',
             }}
           >
-            {/* TODO: Add a personal note about interests/passions outside research */}
-            Life beyond the equations — the things that inspire, ground, and
-            recharge me outside of the lab.
+            Science doesn&apos;t happen in a vacuum. I believe deeply in building
+            community, opening doors, and ensuring that physics — and the people
+            doing it — reflect the full breadth of humanity.
           </p>
         </ScrollReveal>
 

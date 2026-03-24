@@ -4,9 +4,10 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 import { talks } from '@/content/talks'
 
 const TYPE_COLORS: Record<string, string> = {
+  Talk: 'var(--gold-bright)',
   Seminar: 'var(--gold-bright)',
-  Conference: '#8ab4c8',
   Poster: '#a8c8a0',
+  Panelist: '#8ab4c8',
   Workshop: '#c8b090',
   Colloquium: '#c0a0c8',
 }
@@ -118,7 +119,7 @@ export default function Talks() {
                       letterSpacing: '1px',
                     }}
                   >
-                    {talk.year}
+                    {talk.season} {talk.year}
                   </span>
                 </div>
 
