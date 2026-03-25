@@ -85,7 +85,7 @@ export default function Nav() {
           backdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
           WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
           backgroundColor: scrolled
-            ? 'rgba(8, 8, 8, 0.92)'
+            ? 'rgba(7, 9, 15, 0.88)'
             : 'transparent',
           borderBottom: scrolled
             ? '1px solid var(--border)'
@@ -129,26 +129,31 @@ export default function Nav() {
                   border: 'none',
                   cursor: 'none',
                   fontFamily: 'var(--font-jetbrains), monospace',
-                  fontSize: '10px',
+                  fontSize: '11px',
                   textTransform: 'uppercase',
                   letterSpacing: '2px',
                   color:
                     activeSection === link.href.replace('#', '')
                       ? 'var(--gold-bright)'
-                      : 'var(--text-muted)',
-                  transition: 'color 0.2s ease',
-                  padding: '4px 0',
+                      : 'var(--text-secondary)',
+                  borderBottom:
+                    activeSection === link.href.replace('#', '')
+                      ? '1px solid var(--gold-bright)'
+                      : '1px solid transparent',
+                  paddingBottom: '2px',
+                  transition: 'color 0.2s ease, border-color 0.2s ease',
+                  padding: '4px 0 2px',
                 }}
                 onMouseEnter={(e) => {
                   if (activeSection !== link.href.replace('#', '')) {
                     ;(e.target as HTMLButtonElement).style.color =
-                      'var(--text-secondary)'
+                      'var(--text-primary)'
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeSection !== link.href.replace('#', '')) {
                     ;(e.target as HTMLButtonElement).style.color =
-                      'var(--text-muted)'
+                      'var(--text-secondary)'
                   }
                 }}
               >
