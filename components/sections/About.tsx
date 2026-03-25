@@ -70,7 +70,7 @@ export default function About() {
                 }}
               >
                 <Image
-                  src="/headshot.jpg"
+                  src="/Dimple.Sarnaaik.github.io/headshot.jpg"
                   alt="Dimple Sarnaaik"
                   fill
                   unoptimized
