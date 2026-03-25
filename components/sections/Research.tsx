@@ -70,8 +70,8 @@ export default function Research() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '40px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
+              gap: 'clamp(20px, 4vw, 40px)',
               marginBottom: '80px',
               padding: '40px',
               backgroundColor: 'var(--bg-surface)',
@@ -97,7 +97,7 @@ export default function Research() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
             gap: '24px',
           }}
         >

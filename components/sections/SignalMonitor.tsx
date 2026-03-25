@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 // ── palette ───────────────────────────────────────────────────────────────────
 const BG    = '#070706'
@@ -178,6 +179,7 @@ function UTCClock() {
 
 // ── main component ────────────────────────────────────────────────────────────
 export default function SignalMonitor() {
+  const { isMobile, isTablet } = useBreakpoint()
   const [rubinCoord, setRubinCoord] = useState(0)
   const [liveVals, setLiveVals] = useState({
     gamma: '0.0312', sigma: '0.841', xray: '847', halos: 1847, tb: 2.41,
@@ -227,7 +229,7 @@ export default function SignalMonitor() {
       {/* ── section header ── */}
       <ScrollReveal>
         <div style={{
-          padding: '40px 40px 32px', display: 'flex', justifyContent: 'space-between',
+          padding: isMobile ? '24px 20px 20px' : '40px 40px 32px', display: 'flex', justifyContent: 'space-between',
           alignItems: 'flex-end', flexWrap: 'wrap', gap: 16,
         }}>
           <div>
@@ -235,7 +237,7 @@ export default function SignalMonitor() {
               LIVE RESEARCH
             </div>
             <h2 style={{
-              fontFamily: 'var(--font-dm-serif,serif)', fontSize: '30px', fontWeight: 300,
+              fontFamily: 'var(--font-dm-serif,serif)', fontSize: isMobile ? '22px' : '30px', fontWeight: 300,
               color: '#f0e6c8', lineHeight: 1.1, margin: '0 0 8px',
             }}>
               Signal Monitor
@@ -263,7 +265,7 @@ export default function SignalMonitor() {
 
       {/* ── 6-panel grid ── */}
       <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3,1fr)',
+        display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? '1fr 1fr' : 'repeat(3,1fr)',
         gap: '0.5px', backgroundColor: GAP, margin: '0 0 0.5px',
       }}>
         {PANELS.map((panel, i) => {
@@ -277,7 +279,7 @@ export default function SignalMonitor() {
 
           return (
             <ScrollReveal key={panel.name} delay={i * 0.08}>
-              <div style={{ backgroundColor: SURF, padding: '16px 16px 0', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ backgroundColor: SURF, padding: isMobile ? '12px 12px 0' : '16px 16px 0', display: 'flex', flexDirection: 'column' }}>
                 {/* header */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                   <span style={{
@@ -315,7 +317,7 @@ export default function SignalMonitor() {
       </div>
 
       {/* ── bottom row ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5px', backgroundColor: GAP }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0.5px', backgroundColor: GAP }}>
         {/* Cosmological Constraints */}
         <div style={{ backgroundColor: SURF, padding: '20px 20px' }}>
           <div style={{ ...monoStyle(10, GOLD), letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 16 }}>
@@ -358,7 +360,7 @@ export default function SignalMonitor() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {log.map((ev, i) => (
               <div key={i} style={{
-                display: 'grid', gridTemplateColumns: '56px 72px 1fr',
+                display: 'grid', gridTemplateColumns: isMobile ? '48px 60px 1fr' : '56px 72px 1fr',
                 gap: 8, padding: '5px 0', borderBottom: `0.5px solid ${GAP}`, alignItems: 'start',
               }}>
                 <span style={monoStyle(8, MUTED)}>{ev.ts}</span>
@@ -372,7 +374,7 @@ export default function SignalMonitor() {
 
       {/* ── disclaimer strip ── */}
       <div style={{
-        borderTop: `0.5px solid ${GAP}`, padding: '14px 40px',
+        borderTop: `0.5px solid ${GAP}`, padding: isMobile ? '12px 20px' : '14px 40px',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
       }}>
         <p style={{ ...monoStyle(9, '#1e1c18'), maxWidth: 680, lineHeight: 1.6, margin: 0 }}>

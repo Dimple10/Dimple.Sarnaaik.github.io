@@ -84,7 +84,7 @@ export default function Blog() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px, 100%), 1fr))',
             gap: '24px',
           }}
         >
@@ -94,7 +94,7 @@ export default function Blog() {
                 style={{
                   backgroundColor: 'var(--bg-surface)',
                   border: '1px solid var(--border)',
-                  padding: '28px',
+                  padding: 'clamp(16px, 4vw, 28px)',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',

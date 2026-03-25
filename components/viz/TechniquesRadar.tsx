@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 const AXES = [
   { label: 'Gravitational /\nAstrophysical Probes', level: 0.85 },
@@ -8,20 +9,21 @@ const AXES = [
   { label: 'Simulations\n(N-body / Hydro)', level: 0.75 },
 ]
 
-const SIZE = 300
-const CX = SIZE / 2
-const CY = SIZE / 2
-const MAX_R = 105
 const GRIDLINES = [0.25, 0.5, 0.75, 1.0]
 
-function polarToCart(angle: number, r: number) {
+function polarToCart(cx: number, cy: number, angle: number, r: number) {
   return {
-    x: CX + r * Math.cos(angle - Math.PI / 2),
-    y: CY + r * Math.sin(angle - Math.PI / 2),
+    x: cx + r * Math.cos(angle - Math.PI / 2),
+    y: cy + r * Math.sin(angle - Math.PI / 2),
   }
 }
 
 export default function TechniquesRadar() {
+  const { isMobile } = useBreakpoint()
+  const size = isMobile ? 220 : 300
+  const CX = size / 2
+  const CY = size / 2
+  const MAX_R = isMobile ? 77 : 105
   const [scale, setScale] = useState(1.0)
   const rafRef = useRef<number>(0)
   const startRef = useRef<number | null>(null)
@@ -42,7 +44,7 @@ export default function TechniquesRadar() {
   const angles = AXES.map((_, i) => (i * Math.PI * 2) / n)
 
   // Polygon points
-  const polyPoints = AXES.map((ax, i) => polarToCart(angles[i], ax.level * MAX_R))
+  const polyPoints = AXES.map((ax, i) => polarToCart(CX, CY, angles[i], ax.level * MAX_R))
   const polyStr = polyPoints.map((p) => `${p.x},${p.y}`).join(' ')
 
   return (
@@ -67,15 +69,15 @@ export default function TechniquesRadar() {
         Techniques
       </div>
       <svg
-        width={SIZE}
-        height={SIZE}
-        viewBox={`0 0 ${SIZE} ${SIZE}`}
+        width={size}
+        height={size}
+        viewBox={`0 0 ${size} ${size}`}
         style={{ overflow: 'visible' }}
       >
         {/* Grid lines */}
         {GRIDLINES.map((level) => {
           const pts = angles
-            .map((a) => polarToCart(a, level * MAX_R))
+            .map((a) => polarToCart(CX, CY, a, level * MAX_R))
             .map((p) => `${p.x},${p.y}`)
             .join(' ')
           return (
@@ -92,7 +94,7 @@ export default function TechniquesRadar() {
 
         {/* Axes */}
         {angles.map((a, i) => {
-          const end = polarToCart(a, MAX_R)
+          const end = polarToCart(CX, CY, a, MAX_R)
           return (
             <line
               key={i}
@@ -122,7 +124,7 @@ export default function TechniquesRadar() {
           />
           {/* Level dots */}
           {AXES.map((ax, i) => {
-            const pt = polarToCart(angles[i], ax.level * MAX_R)
+            const pt = polarToCart(CX, CY, angles[i], ax.level * MAX_R)
             return (
               <circle
                 key={i}
@@ -139,7 +141,7 @@ export default function TechniquesRadar() {
         {/* Labels */}
         {AXES.map((ax, i) => {
           const labelR = MAX_R + 28
-          const pt = polarToCart(angles[i], labelR)
+          const pt = polarToCart(CX, CY, angles[i], labelR)
           const lines = ax.label.split('\n')
 
           return (
@@ -169,6 +171,7 @@ export default function TechniquesRadar() {
 
         {/* Center dot */}
         <circle cx={CX} cy={CY} r={3} fill="var(--gold-dim)" />
+
       </svg>
     </div>
   )

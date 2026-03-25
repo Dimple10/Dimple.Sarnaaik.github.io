@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 interface DarkMatterModel {
   id: string
@@ -51,6 +52,7 @@ const MODELS: DarkMatterModel[] = [
 ]
 
 export default function ModelsGrid() {
+  const { isMobile } = useBreakpoint()
   const [selected, setSelected] = useState<string | null>(null)
 
   const selectedModel = MODELS.find((m) => m.id === selected)
@@ -73,7 +75,7 @@ export default function ModelsGrid() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
           gap: '10px',
         }}
       >

@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 const STATS = [
   { label: 'University', value: 'USC' },
@@ -11,6 +12,7 @@ const STATS = [
 ]
 
 export default function About() {
+  const { isMobile } = useBreakpoint()
   return (
     <section
       id="about"
@@ -37,7 +39,7 @@ export default function About() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
             gap: 'clamp(40px, 6vw, 80px)',
             marginBottom: '60px',
           }}
@@ -47,7 +49,8 @@ export default function About() {
             <div
               style={{
                 position: 'relative',
-                maxWidth: '320px',
+                maxWidth: isMobile ? '100%' : '320px',
+                margin: isMobile ? '0 auto' : undefined,
               }}
             >
               <div

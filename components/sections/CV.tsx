@@ -1,6 +1,7 @@
 'use client'
 
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 const education = [
   {
@@ -49,6 +50,7 @@ const service = [
 ]
 
 export default function CV() {
+  const { isMobile } = useBreakpoint()
   return (
     <section
       id="cv"
@@ -125,8 +127,8 @@ export default function CV() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '60px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
+            gap: isMobile ? '40px' : '60px',
           }}
         >
           {/* Left: Education */}
@@ -148,7 +150,7 @@ export default function CV() {
               <div
                 style={{
                   position: 'relative',
-                  paddingLeft: '20px',
+                  paddingLeft: isMobile ? '12px' : '20px',
                 }}
               >
                 {/* Timeline line */}

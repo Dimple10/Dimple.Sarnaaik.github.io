@@ -130,6 +130,13 @@ export default function DensityCanvas() {
     }
     container.addEventListener('mousemove', handleMouseMove)
 
+    // Touch move on canvas for hover equivalent
+    const handleTouchMoveCanvas = (e: TouchEvent) => {
+      const rect = container.getBoundingClientRect()
+      mouseRef.current = { x: e.touches[0].clientX - rect.left, y: e.touches[0].clientY - rect.top }
+    }
+    container.addEventListener('touchmove', handleTouchMoveCanvas, { passive: false })
+
     // Divider drag
     let dragging = false
     const handleMouseDown = (e: MouseEvent) => {
@@ -151,9 +158,33 @@ export default function DensityCanvas() {
     }
     const handleWindowMouseUp = () => { dragging = false }
 
+    // Touch divider drag
+    const handleTouchStart = (e: TouchEvent) => {
+      const rect = container.getBoundingClientRect()
+      const mx = e.touches[0].clientX - rect.left
+      if (Math.abs(mx - divXRef.current) < 18) {
+        dragging = true
+        e.preventDefault()
+      }
+    }
+    const handleWindowTouchMove = (e: TouchEvent) => {
+      if (!dragging) return
+      e.preventDefault()
+      const rect = container.getBoundingClientRect()
+      const x = e.touches[0].clientX - rect.left
+      const w = container.offsetWidth
+      const clamped = Math.max(60, Math.min(w - 60, x))
+      divXRef.current = clamped
+      setDivXState(clamped)
+    }
+    const handleWindowTouchEnd = () => { dragging = false }
+
     container.addEventListener('mousedown', handleMouseDown)
     window.addEventListener('mousemove', handleWindowMouseMove)
     window.addEventListener('mouseup', handleWindowMouseUp)
+    container.addEventListener('touchstart', handleTouchStart, { passive: false })
+    window.addEventListener('touchmove', handleWindowTouchMove, { passive: false })
+    window.addEventListener('touchend', handleWindowTouchEnd)
 
     const stars = starsRef.current
     const particles = particlesRef.current
@@ -313,9 +344,13 @@ export default function DensityCanvas() {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', resize)
       container.removeEventListener('mousemove', handleMouseMove)
+      container.removeEventListener('touchmove', handleTouchMoveCanvas)
       container.removeEventListener('mousedown', handleMouseDown)
       window.removeEventListener('mousemove', handleWindowMouseMove)
       window.removeEventListener('mouseup', handleWindowMouseUp)
+      container.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleWindowTouchMove)
+      window.removeEventListener('touchend', handleWindowTouchEnd)
     }
   }, [])
 

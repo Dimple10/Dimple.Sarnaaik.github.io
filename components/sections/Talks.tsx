@@ -58,7 +58,7 @@ export default function Talks() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px, 100%), 1fr))',
             gap: '20px',
           }}
         >
@@ -68,7 +68,7 @@ export default function Talks() {
                 style={{
                   backgroundColor: 'var(--bg-surface)',
                   border: '1px solid var(--border)',
-                  padding: '28px',
+                  padding: 'clamp(16px, 4vw, 28px)',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
@@ -208,7 +208,7 @@ export default function Talks() {
               style={{
                 backgroundColor: 'transparent',
                 border: '1px dashed var(--border)',
-                padding: '28px',
+                padding: 'clamp(16px, 4vw, 28px)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',

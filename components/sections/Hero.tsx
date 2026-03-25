@@ -2,12 +2,14 @@
 
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 const DensityCanvas = dynamic(() => import('@/components/viz/DensityCanvas'), {
   ssr: false,
 })
 
 export default function Hero() {
+  const { isMobile } = useBreakpoint()
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -33,10 +35,10 @@ export default function Hero() {
       <div
         style={{
           position: 'absolute',
-          top: '80px',
+          top: isMobile ? '70px' : '80px',
           right: '24px',
           fontFamily: 'var(--font-jetbrains), monospace',
-          fontSize: '10px',
+          fontSize: isMobile ? '9px' : '10px',
           textTransform: 'uppercase',
           letterSpacing: '2px',
           color: 'var(--text-muted)',

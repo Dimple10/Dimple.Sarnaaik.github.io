@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 interface TimelineItemProps {
   year: string
@@ -21,6 +22,7 @@ export default function TimelineItem({
   linkHref,
   extra,
 }: TimelineItemProps) {
+  const { isMobile } = useBreakpoint()
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -29,8 +31,8 @@ export default function TimelineItem({
       onMouseLeave={() => setHovered(false)}
       style={{
         display: 'flex',
-        gap: '2rem',
-        paddingLeft: '1.5rem',
+        gap: isMobile ? '1rem' : '2rem',
+        paddingLeft: isMobile ? '1rem' : '1.5rem',
         position: 'relative',
         paddingBottom: '2rem',
         transform: hovered ? 'translateX(4px)' : 'translateX(0)',
