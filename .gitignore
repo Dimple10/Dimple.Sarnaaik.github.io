@@ -1,0 +1,7 @@
+.next/
+.claude/
+node_modules/
+out/
+ruby-3.3.6/
+ruby-3.3.6.tar.gz
+.DS_Store
