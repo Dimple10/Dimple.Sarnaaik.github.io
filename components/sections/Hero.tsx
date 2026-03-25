@@ -23,7 +23,7 @@ export default function Hero() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'var(--bg-primary)',
+        backgroundColor: '#0a0a0a',
       }}
     >
       {/* Interactive canvas background */}
