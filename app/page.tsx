@@ -1,6 +1,7 @@
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Research from '@/components/sections/Research'
+import SignalMonitor from '@/components/sections/SignalMonitor'
 import Publications from '@/components/sections/Publications'
 import CV from '@/components/sections/CV'
 import Talks from '@/components/sections/Talks'
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Research />
+      <SignalMonitor />
       <Publications />
       <CV />
       <Talks />
