@@ -75,11 +75,8 @@ export default function DensityCanvas() {
       const cx = w / 2
       const cy = h / 2
 
-      // Deep space background — radial gradient, slightly lighter at center
-      const bgGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.max(w, h) * 0.75)
-      bgGrad.addColorStop(0, '#0c1526')
-      bgGrad.addColorStop(1, '#050810')
-      ctx.fillStyle = bgGrad
+      // Dark background
+      ctx.fillStyle = '#0a0a0a'
       ctx.fillRect(0, 0, w, h)
 
       const particles = particlesRef.current
