@@ -85,7 +85,7 @@ export default function ModelsGrid() {
               onClick={() => setSelected(isSelected ? null : model.id)}
               style={{
                 background: isSelected
-                  ? 'rgba(200, 169, 110, 0.06)'
+                  ? 'rgba(91, 163, 201, 0.06)'
                   : 'var(--bg-surface)',
                 border: `1px solid ${isSelected ? 'var(--gold-mid)' : 'var(--border)'}`,
                 padding: '14px',

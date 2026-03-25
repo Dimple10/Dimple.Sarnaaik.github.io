@@ -103,7 +103,7 @@ export default function NBodyBanner() {
           brightness = Math.min(brightness * 2500, 1)
 
           if (brightness > 0.02) {
-            ctx.fillStyle = `rgba(200, 120, 30, ${brightness * 0.35})`
+            ctx.fillStyle = `rgba(20, 90, 165, ${brightness * 0.40})`
             ctx.fillRect(gx * GRID_CELL, gy * GRID_CELL, GRID_CELL, GRID_CELL)
           }
         }
@@ -120,7 +120,7 @@ export default function NBodyBanner() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(200, 169, 110, ${alpha})`
+        ctx.fillStyle = `rgba(91, 163, 201, ${alpha})`
         ctx.fill()
       }
 

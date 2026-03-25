@@ -5,17 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #080808;
-  --bg-secondary: #0d0d0d;
-  --bg-surface: #111111;
-  --border: #1e1e1e;
-  --border-accent: #2a2a2a;
-  --gold-bright: #c8a96e;
-  --gold-mid: #9a7a4a;
-  --gold-dim: #5c4a2a;
-  --text-primary: #f0e6c8;
-  --text-secondary: #9a8a6a;
-  --text-muted: #555555;
+  --bg-primary: #07090f;
+  --bg-secondary: #0b0f1a;
+  --bg-surface: #101828;
+  --border: #1c2640;
+  --border-accent: #283650;
+  --gold-bright: #5ba3c9;
+  --gold-mid: #3d7a9a;
+  --gold-dim: #1e4a63;
+  --text-primary: #dce8f2;
+  --text-secondary: #7898b0;
+  --text-muted: #3a5570;
 }
 
 * {
@@ -91,7 +91,7 @@ body {
   border-top: 1px solid var(--border);
 }
 
-/* Gold tag badge */
+/* Accent tag badge */
 .tag-gold {
   font-family: var(--font-jetbrains), 'JetBrains Mono', Consolas, monospace;
   font-size: 10px;
@@ -154,7 +154,7 @@ body {
   }
 }
 
-/* Starfield background */
+/* Starfield background — cool blue-white stars */
 .starfield {
   position: absolute;
   inset: 0;
@@ -167,24 +167,24 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 25% 60%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 40% 35%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
-    radial-gradient(1px 1px at 55% 80%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
-    radial-gradient(1px 1px at 70% 15%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 50%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 15% 85%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
-    radial-gradient(1px 1px at 30% 10%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
-    radial-gradient(1px 1px at 60% 55%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 75% 90%, rgba(200, 169, 110, 0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 30%, rgba(200, 169, 110, 0.12) 0%, transparent 100%),
-    radial-gradient(1px 1px at 5% 45%, rgba(200, 169, 110, 0.08) 0%, transparent 100%),
-    radial-gradient(1px 1px at 45% 70%, rgba(200, 169, 110, 0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 20% 40%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
-    radial-gradient(1px 1px at 65% 25%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
-    radial-gradient(1px 1px at 80% 70%, rgba(240, 230, 200, 0.06) 0%, transparent 100%),
-    radial-gradient(1px 1px at 35% 90%, rgba(240, 230, 200, 0.05) 0%, transparent 100%),
-    radial-gradient(1px 1px at 95% 55%, rgba(240, 230, 200, 0.05) 0%, transparent 100%);
+    radial-gradient(1px 1px at 10% 20%, rgba(91, 163, 201, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 60%, rgba(91, 163, 201, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 35%, rgba(91, 163, 201, 0.14) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 80%, rgba(91, 163, 201, 0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 15%, rgba(91, 163, 201, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 50%, rgba(91, 163, 201, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 85%, rgba(91, 163, 201, 0.14) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 10%, rgba(91, 163, 201, 0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 55%, rgba(91, 163, 201, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 90%, rgba(91, 163, 201, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 30%, rgba(91, 163, 201, 0.14) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 45%, rgba(91, 163, 201, 0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 70%, rgba(91, 163, 201, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 40%, rgba(220, 232, 242, 0.07) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 25%, rgba(220, 232, 242, 0.07) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 70%, rgba(220, 232, 242, 0.07) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 90%, rgba(220, 232, 242, 0.05) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 55%, rgba(220, 232, 242, 0.05) 0%, transparent 100%);
 }
 
 /* Smooth section transitions */
@@ -192,12 +192,12 @@ section {
   position: relative;
 }
 
-/* Gold text utility */
+/* Accent text utility */
 .text-gold {
   color: var(--gold-bright);
 }
 
-/* Hover gold effect */
+/* Hover accent effect */
 .hover-gold:hover {
   color: var(--gold-bright);
   transition: color 0.2s ease;

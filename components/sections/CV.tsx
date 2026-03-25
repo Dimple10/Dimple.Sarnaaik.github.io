@@ -107,7 +107,7 @@ export default function CV() {
                 ;(e.currentTarget as HTMLAnchorElement).style.borderColor =
                   'var(--gold-bright)'
                 ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                  'rgba(200, 169, 110, 0.08)'
+                  'rgba(91, 163, 201, 0.08)'
               }}
               onMouseLeave={(e) => {
                 ;(e.currentTarget as HTMLAnchorElement).style.borderColor =

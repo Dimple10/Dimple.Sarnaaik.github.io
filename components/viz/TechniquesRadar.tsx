@@ -116,7 +116,7 @@ export default function TechniquesRadar() {
         >
           <polygon
             points={polyStr}
-            fill="rgba(200, 169, 110, 0.15)"
+            fill="rgba(91, 163, 201, 0.15)"
             stroke="var(--gold-mid)"
             strokeWidth="1.5"
           />

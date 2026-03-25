@@ -76,7 +76,7 @@ export default function Publications() {
                       : 'var(--text-muted)',
                   backgroundColor:
                     activeFilter === model
-                      ? 'rgba(200, 169, 110, 0.08)'
+                      ? 'rgba(91, 163, 201, 0.08)'
                       : 'transparent',
                   transition: 'all 0.2s ease',
                 }}

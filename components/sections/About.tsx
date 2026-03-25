@@ -59,18 +59,11 @@ export default function About() {
                 }}
                 onMouseEnter={(e) => {
                   const img = e.currentTarget.querySelector('img') as HTMLImageElement
-                  if (img) {
-                    img.style.filter =
-                      'grayscale(0%) sepia(30%) saturate(150%) hue-rotate(5deg)'
-                    img.style.transform = 'scale(1.02)'
-                  }
+                  if (img) img.style.transform = 'scale(1.02)'
                 }}
                 onMouseLeave={(e) => {
                   const img = e.currentTarget.querySelector('img') as HTMLImageElement
-                  if (img) {
-                    img.style.filter = 'grayscale(100%)'
-                    img.style.transform = 'scale(1)'
-                  }
+                  if (img) img.style.transform = 'scale(1)'
                 }}
               >
                 <Image
@@ -81,8 +74,7 @@ export default function About() {
                   style={{
                     objectFit: 'cover',
                     objectPosition: 'top center',
-                    filter: 'grayscale(100%)',
-                    transition: 'filter 0.4s ease, transform 0.4s ease',
+                    transition: 'transform 0.4s ease',
                   }}
                 />
               </div>
@@ -196,7 +188,7 @@ export default function About() {
                     ;(e.currentTarget as HTMLAnchorElement).style.borderColor =
                       'var(--gold-bright)'
                     ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                      'rgba(200, 169, 110, 0.08)'
+                      'rgba(91, 163, 201, 0.08)'
                   }}
                   onMouseLeave={(e) => {
                     ;(e.currentTarget as HTMLAnchorElement).style.borderColor =
@@ -265,7 +257,7 @@ export default function About() {
                 }}
                 onMouseEnter={(e) => {
                   ;(e.currentTarget as HTMLDivElement).style.backgroundColor =
-                    'rgba(200, 169, 110, 0.04)'
+                    'rgba(91, 163, 201, 0.04)'
                 }}
                 onMouseLeave={(e) => {
                   ;(e.currentTarget as HTMLDivElement).style.backgroundColor =

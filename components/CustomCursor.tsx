@@ -78,8 +78,8 @@ export default function CustomCursor() {
           width: expanded ? 48 : 28,
           height: expanded ? 48 : 28,
           borderColor: expanded
-            ? 'rgba(200, 169, 110, 0.8)'
-            : 'rgba(154, 122, 74, 0.6)',
+            ? 'rgba(91, 163, 201, 0.8)'
+            : 'rgba(61, 122, 154, 0.6)',
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
       />

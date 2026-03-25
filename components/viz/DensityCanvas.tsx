@@ -161,7 +161,7 @@ export default function DensityCanvas() {
           brightness = Math.min(brightness * 3000, 1)
 
           if (brightness > 0.02) {
-            ctx.fillStyle = `rgba(200, 120, 30, ${brightness * 0.4})`
+            ctx.fillStyle = `rgba(20, 90, 165, ${brightness * 0.45})`
             ctx.fillRect(gx * GRID_CELL, gy * GRID_CELL, GRID_CELL, GRID_CELL)
           }
         }
@@ -180,7 +180,7 @@ export default function DensityCanvas() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(200, 169, 110, ${alpha})`
+        ctx.fillStyle = `rgba(91, 163, 201, ${alpha})`
         ctx.fill()
       }
 
