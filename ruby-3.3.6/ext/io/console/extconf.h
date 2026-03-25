@@ -1,0 +1,13 @@
+#ifndef EXTCONF_H
+#define EXTCONF_H
+#define HAVE_RB_IO_PATH 1
+#define HAVE_RB_IO_DESCRIPTOR 1
+#define HAVE_RB_IO_GET_WRITE_IO 1
+#define HAVE_RB_IO_CLOSED_P 1
+#define HAVE_RB_IO_OPEN_DESCRIPTOR 1
+#define HAVE_TERMIOS_H 1
+#define HAVE_CFMAKERAW 1
+#define HAVE_SYS_IOCTL_H 1
+#define HAVE_RB_IO_WAIT 1
+#define IO_CONSOLE_VERSION 0.7.1
+#endif

@@ -66,7 +66,9 @@ export default function NBodyBanner() {
       const cx = w / 2
       const cy = h / 2
 
-      ctx.clearRect(0, 0, w, h)
+      // Deep space background — solid dark fill
+      ctx.fillStyle = '#050810'
+      ctx.fillRect(0, 0, w, h)
 
       tRef.current += 1
 
@@ -142,6 +144,7 @@ export default function NBodyBanner() {
         width: '100%',
         height: '200px',
         overflow: 'hidden',
+        backgroundColor: '#050810',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
       }}

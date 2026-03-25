@@ -56,7 +56,7 @@ export default function TimelineItem({
       <div
         style={{
           fontFamily: 'var(--font-jetbrains), monospace',
-          fontSize: '10px',
+          fontSize: '11px',
           letterSpacing: '2px',
           color: 'var(--text-muted)',
           textTransform: 'uppercase',
@@ -112,7 +112,7 @@ export default function TimelineItem({
             rel="noopener noreferrer"
             style={{
               fontFamily: 'var(--font-jetbrains), monospace',
-              fontSize: '10px',
+              fontSize: '11px',
               letterSpacing: '2px',
               textTransform: 'uppercase',
               color: 'var(--gold-mid)',

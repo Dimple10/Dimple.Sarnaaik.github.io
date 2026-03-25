@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'exe/ruby'
+relocations:
+  - { offsetInCU: 0x1E, offset: 0x1E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CE8, symSize: 0xD8 }
+  - { offsetInCU: 0x2B, offset: 0x2B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CE8, symSize: 0xD8 }
+  - { offsetInCU: 0x50, offset: 0x50, size: 0x8, addend: 0x0, symName: _main.builddir, symObjAddr: 0x258, symBinAddr: 0x100003E38, symSize: 0x0 }
+  - { offsetInCU: 0x65, offset: 0x65, size: 0x8, addend: 0x0, symName: _main.rubypath, symObjAddr: 0x292, symBinAddr: 0x100003E72, symSize: 0x0 }
+  - { offsetInCU: 0x7A, offset: 0x7A, size: 0x8, addend: 0x0, symName: _main.rubylib, symObjAddr: 0x2D1, symBinAddr: 0x100003EB1, symSize: 0x0 }
+  - { offsetInCU: 0x17B, offset: 0x17B, size: 0x8, addend: 0x0, symName: _insert_env_path, symObjAddr: 0xD8, symBinAddr: 0x100003B68, symSize: 0x180 }
+...

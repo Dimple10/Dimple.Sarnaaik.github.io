@@ -1,0 +1,9 @@
+#define ABS_SRCDIR "/Users/fangirl/Repos/Dimple.Sarnaaik.github.io/ruby-3.3.6"
+#define BUILDDIR   "/Users/fangirl/Repos/Dimple.Sarnaaik.github.io/ruby-3.3.6"
+#define LIBPATHENV "DYLD_LIBRARY_PATH"
+#define PRELOADENV "DYLD_INSERT_LIBRARIES"
+#define PATH_SEPARATOR ":"
+#define PATH_SEP   ':'
+#define EXTOUT     ".ext"
+#define ARCH       "arm64-darwin23"
+#define SOEXT      "dylib"

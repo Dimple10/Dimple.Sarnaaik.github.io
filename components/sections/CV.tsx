@@ -78,7 +78,7 @@ export default function CV() {
               <h2
                 style={{
                   fontFamily: 'var(--font-dm-serif), serif',
-                  fontSize: 'clamp(28px, 3.5vw, 44px)',
+                  fontSize: 'clamp(30px, 3.5vw, 48px)',
                   fontWeight: 400,
                   color: 'var(--text-primary)',
                   lineHeight: 1.2,
@@ -93,7 +93,7 @@ export default function CV() {
               href="/cv.pdf"
               style={{
                 fontFamily: 'var(--font-jetbrains), monospace',
-                fontSize: '10px',
+                fontSize: '11px',
                 textTransform: 'uppercase',
                 letterSpacing: '2px',
                 color: 'var(--gold-bright)',
@@ -135,7 +135,7 @@ export default function CV() {
               <div
                 style={{
                   fontFamily: 'var(--font-jetbrains), monospace',
-                  fontSize: '10px',
+                  fontSize: '11px',
                   textTransform: 'uppercase',
                   letterSpacing: '3px',
                   color: 'var(--gold-bright)',
@@ -189,7 +189,7 @@ export default function CV() {
                     <div
                       style={{
                         fontFamily: 'var(--font-jetbrains), monospace',
-                        fontSize: '9px',
+                        fontSize: '10px',
                         textTransform: 'uppercase',
                         letterSpacing: '2px',
                         color: 'var(--text-muted)',
@@ -212,7 +212,7 @@ export default function CV() {
 
                     <div
                       style={{
-                        fontSize: '13px',
+                        fontSize: '14px',
                         color: 'var(--text-secondary)',
                         marginBottom: '4px',
                       }}
@@ -222,7 +222,7 @@ export default function CV() {
 
                     <div
                       style={{
-                        fontSize: '12px',
+                        fontSize: '13px',
                         color: 'var(--text-muted)',
                         fontStyle: 'italic',
                       }}
@@ -249,7 +249,7 @@ export default function CV() {
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '10px',
+                    fontSize: '11px',
                     textTransform: 'uppercase',
                     letterSpacing: '3px',
                     color: 'var(--gold-bright)',
@@ -270,7 +270,7 @@ export default function CV() {
                       <div
                         style={{
                           fontFamily: 'var(--font-jetbrains), monospace',
-                          fontSize: '9px',
+                          fontSize: '10px',
                           textTransform: 'uppercase',
                           letterSpacing: '2px',
                           color: 'var(--text-muted)',
@@ -304,7 +304,7 @@ export default function CV() {
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '10px',
+                    fontSize: '11px',
                     textTransform: 'uppercase',
                     letterSpacing: '3px',
                     color: 'var(--gold-bright)',
@@ -325,7 +325,7 @@ export default function CV() {
                     <div
                       style={{
                         fontFamily: 'var(--font-jetbrains), monospace',
-                        fontSize: '10px',
+                        fontSize: '11px',
                         color: 'var(--text-muted)',
                         minWidth: '40px',
                       }}
@@ -335,7 +335,7 @@ export default function CV() {
                     <div>
                       <div
                         style={{
-                          fontSize: '14px',
+                          fontSize: '15px',
                           color: 'var(--text-primary)',
                           marginBottom: '2px',
                         }}
@@ -344,7 +344,7 @@ export default function CV() {
                       </div>
                       <div
                         style={{
-                          fontSize: '12px',
+                          fontSize: '13px',
                           color: 'var(--text-muted)',
                           fontStyle: 'italic',
                         }}
@@ -363,7 +363,7 @@ export default function CV() {
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '10px',
+                    fontSize: '11px',
                     textTransform: 'uppercase',
                     letterSpacing: '3px',
                     color: 'var(--gold-bright)',
@@ -376,7 +376,7 @@ export default function CV() {
                   <div key={i} style={{ marginBottom: '12px' }}>
                     <div
                       style={{
-                        fontSize: '14px',
+                        fontSize: '15px',
                         color: 'var(--text-primary)',
                         marginBottom: '2px',
                       }}
@@ -385,7 +385,7 @@ export default function CV() {
                     </div>
                     <div
                       style={{
-                        fontSize: '12px',
+                        fontSize: '13px',
                         color: 'var(--text-muted)',
                         fontStyle: 'italic',
                       }}

@@ -40,7 +40,7 @@ export default function Research() {
           <h2
             style={{
               fontFamily: 'var(--font-dm-serif), serif',
-              fontSize: 'clamp(28px, 3.5vw, 44px)',
+              fontSize: 'clamp(30px, 3.5vw, 48px)',
               fontWeight: 400,
               color: 'var(--text-primary)',
               lineHeight: 1.2,
@@ -52,7 +52,7 @@ export default function Research() {
           </h2>
           <p
             style={{
-              fontSize: '15px',
+              fontSize: '16px',
               color: 'var(--text-secondary)',
               lineHeight: 1.7,
               maxWidth: '600px',
@@ -128,7 +128,7 @@ export default function Research() {
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '9px',
+                    fontSize: '10px',
                     textTransform: 'uppercase',
                     letterSpacing: '3px',
                     color: 'var(--gold-dim)',
@@ -140,7 +140,7 @@ export default function Research() {
                 <div
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '9px',
+                    fontSize: '10px',
                     textTransform: 'uppercase',
                     letterSpacing: '2px',
                     color: 'var(--text-muted)',
@@ -168,7 +168,7 @@ export default function Research() {
                 {/* Description */}
                 <p
                   style={{
-                    fontSize: '14px',
+                    fontSize: '15px',
                     color: 'var(--text-secondary)',
                     lineHeight: 1.7,
                     marginBottom: '24px',
@@ -210,7 +210,7 @@ export default function Research() {
                   href={`#publications`}
                   style={{
                     fontFamily: 'var(--font-jetbrains), monospace',
-                    fontSize: '10px',
+                    fontSize: '11px',
                     textTransform: 'uppercase',
                     letterSpacing: '2px',
                     color: 'var(--gold-mid)',

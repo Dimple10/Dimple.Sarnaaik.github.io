@@ -30,7 +30,7 @@ export default function Talks() {
           <h2
             style={{
               fontFamily: 'var(--font-dm-serif), serif',
-              fontSize: 'clamp(28px, 3.5vw, 44px)',
+              fontSize: 'clamp(30px, 3.5vw, 48px)',
               fontWeight: 400,
               color: 'var(--text-primary)',
               lineHeight: 1.2,
@@ -42,7 +42,7 @@ export default function Talks() {
           </h2>
           <p
             style={{
-              fontSize: '15px',
+              fontSize: '16px',
               color: 'var(--text-secondary)',
               lineHeight: 1.7,
               maxWidth: '560px',
@@ -99,7 +99,7 @@ export default function Talks() {
                   <span
                     style={{
                       fontFamily: 'var(--font-jetbrains), monospace',
-                      fontSize: '9px',
+                      fontSize: '10px',
                       textTransform: 'uppercase',
                       letterSpacing: '2px',
                       color: TYPE_COLORS[talk.type] ?? 'var(--text-muted)',
@@ -114,7 +114,7 @@ export default function Talks() {
                   <span
                     style={{
                       fontFamily: 'var(--font-jetbrains), monospace',
-                      fontSize: '10px',
+                      fontSize: '11px',
                       color: 'var(--text-muted)',
                       letterSpacing: '1px',
                     }}
@@ -142,7 +142,7 @@ export default function Talks() {
                   <div
                     style={{
                       fontFamily: 'var(--font-jetbrains), monospace',
-                      fontSize: '10px',
+                      fontSize: '11px',
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
                       color: 'var(--text-secondary)',
@@ -155,7 +155,7 @@ export default function Talks() {
                     <div
                       style={{
                         fontFamily: 'var(--font-jetbrains), monospace',
-                        fontSize: '9px',
+                        fontSize: '10px',
                         color: 'var(--text-muted)',
                         letterSpacing: '1px',
                       }}
@@ -169,7 +169,7 @@ export default function Talks() {
                 {talk.abstract && (
                   <p
                     style={{
-                      fontSize: '12px',
+                      fontSize: '13px',
                       color: 'var(--text-muted)',
                       lineHeight: 1.6,
                       margin: 0,
@@ -188,7 +188,7 @@ export default function Talks() {
                     rel="noopener noreferrer"
                     style={{
                       fontFamily: 'var(--font-jetbrains), monospace',
-                      fontSize: '10px',
+                      fontSize: '11px',
                       textTransform: 'uppercase',
                       letterSpacing: '2px',
                       color: 'var(--gold-mid)',
@@ -221,7 +221,7 @@ export default function Talks() {
               <div
                 style={{
                   fontFamily: 'var(--font-jetbrains), monospace',
-                  fontSize: '9px',
+                  fontSize: '10px',
                   textTransform: 'uppercase',
                   letterSpacing: '3px',
                   color: 'var(--text-muted)',

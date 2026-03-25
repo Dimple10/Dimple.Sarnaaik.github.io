@@ -1,0 +1,271 @@
+=== OpenSSL for Ruby configurator ===
+have_func: checking for rb_io_descriptor()... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 'rb_io_descriptor'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_descriptor; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_descriptor; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_io_descriptor();
+15: int t(void) { rb_io_descriptor(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_io_maybe_wait(0, Qnil, Qnil, Qnil) in ruby/io.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/io.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: 
+17: int t(void) { rb_io_maybe_wait(0, Qnil, Qnil, Qnil); return 0; }
+/* end */
+
+--------------------
+
+=== Checking for system dependent stuff... ===
+have_library: checking for t_open() in -lnsl... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lnsl  -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 't_open'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))t_open; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))t_open; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lnsl  -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: library 'nsl' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void t_open();
+15: int t(void) { t_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for socket() in -lsocket... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lsocket  -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 'socket'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lsocket  -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: library 'socket' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void socket();
+15: int t(void) { socket(); return 0; }
+/* end */
+
+--------------------
+
+=== Checking for required stuff... ===
+pkg_config: checking for pkg-config for openssl... -------------------- not found
+
+package configuration for openssl is not found
+--------------------
+
+have_header: checking for openssl/ssl.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <openssl/ssl.h>
+/* end */
+
+--------------------
+
+have_library: checking for CRYPTO_malloc() in -lcrypto... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lcrypto  -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 'CRYPTO_malloc'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))CRYPTO_malloc; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))CRYPTO_malloc; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/openssl -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lcrypto  -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: warning: ignoring file '/usr/local/Cellar/openssl@3/3.4.0/lib/libcrypto.3.dylib': found architecture 'x86_64', required architecture 'arm64'
+ld: Undefined symbols:
+  _CRYPTO_malloc, referenced from:
+      _t in conftest-f74f22.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void CRYPTO_malloc();
+15: int t(void) { CRYPTO_malloc(); return 0; }
+/* end */
+
+--------------------
+
+=== Checking for required stuff failed. ===
+Makefile wasn't created. Fix the errors above.
+/Users/fangirl/Repos/Dimple.Sarnaaik.github.io/ruby-3.3.6/ext/openssl/extconf.rb:122: OpenSSL library could not be found. You might want to use --with-openssl-dir=<dir> option to specify the prefix where OpenSSL is installed.
+	/Users/fangirl/Repos/Dimple.Sarnaaik.github.io/ruby-3.3.6/ext/openssl/extconf.rb:122:in `<top (required)>'
+	./ext/extmk.rb:227:in `load'
+	./ext/extmk.rb:227:in `block in extmake'
+	/Users/fangirl/Repos/Dimple.Sarnaaik.github.io/ruby-3.3.6/lib/mkmf.rb:314:in `open'
+	./ext/extmk.rb:223:in `extmake'
+	./ext/extmk.rb:648:in `block in <main>'
+	./ext/extmk.rb:644:in `each'
+	./ext/extmk.rb:644:in `<main>'

@@ -36,7 +36,7 @@ export default function Hero() {
           top: '80px',
           right: '24px',
           fontFamily: 'var(--font-jetbrains), monospace',
-          fontSize: '9px',
+          fontSize: '10px',
           textTransform: 'uppercase',
           letterSpacing: '2px',
           color: 'var(--text-muted)',
@@ -63,7 +63,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{
             fontFamily: 'var(--font-jetbrains), monospace',
-            fontSize: '10px',
+            fontSize: '11px',
             textTransform: 'uppercase',
             letterSpacing: '4px',
             color: 'var(--gold-bright)',
@@ -79,7 +79,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.4 }}
           style={{
             fontFamily: 'var(--font-dm-serif), serif',
-            fontSize: 'clamp(48px, 7vw, 96px)',
+            fontSize: 'clamp(52px, 7vw, 100px)',
             fontWeight: 300,
             letterSpacing: '0.04em',
             color: 'var(--text-primary)',
@@ -113,7 +113,7 @@ export default function Hero() {
           style={{
             fontFamily: 'var(--font-dm-serif), serif',
             fontStyle: 'italic',
-            fontSize: 'clamp(16px, 2vw, 22px)',
+            fontSize: 'clamp(18px, 2vw, 24px)',
             color: 'var(--text-secondary)',
             marginBottom: '48px',
           }}

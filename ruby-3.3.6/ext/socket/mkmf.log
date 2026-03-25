@@ -1,0 +1,3716 @@
+have_header: checking for sys/uio.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/types.h>
+4: #include <netdb.h>
+5: #include <string.h>
+6: #include <sys/socket.h>
+7: #include <netinet/in.h>
+8: #include <sys/uio.h>
+/* end */
+
+--------------------
+
+have_header: checking for xti.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:9:10: fatal error: 'xti.h' file not found
+#include <xti.h>
+         ^~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/types.h>
+4: #include <netdb.h>
+5: #include <string.h>
+6: #include <sys/socket.h>
+7: #include <netinet/in.h>
+8: #include <sys/uio.h>
+9: #include <xti.h>
+/* end */
+
+--------------------
+
+have_header: checking for netinet/in_systm.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/types.h>
+4: #include <netdb.h>
+5: #include <string.h>
+6: #include <sys/socket.h>
+7: #include <netinet/in.h>
+8: #include <sys/uio.h>
+9: #include <netinet/in_systm.h>
+/* end */
+
+--------------------
+
+have_header: checking for netinet/tcp.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+/* end */
+
+--------------------
+
+have_header: checking for netinet/tcp_fsm.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+/* end */
+
+--------------------
+
+have_header: checking for netinet/udp.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+/* end */
+
+--------------------
+
+have_header: checking for arpa/inet.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+/* end */
+
+--------------------
+
+have_header: checking for netpacket/packet.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:14:10: fatal error: 'netpacket/packet.h' file not found
+#include <netpacket/packet.h>
+         ^~~~~~~~~~~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <netpacket/packet.h>
+/* end */
+
+--------------------
+
+have_header: checking for net/ethernet.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/un.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+/* end */
+
+--------------------
+
+have_header: checking for afunix.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:16:10: fatal error: 'afunix.h' file not found
+#include <afunix.h>
+         ^~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <afunix.h>
+/* end */
+
+--------------------
+
+have_header: checking for ifaddrs.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/ioctl.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/sockio.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+/* end */
+
+--------------------
+
+have_header: checking for net/if.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/param.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/ucred.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+/* end */
+
+--------------------
+
+have_header: checking for ucred.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:22:10: fatal error: 'ucred.h' file not found
+#include <ucred.h>
+         ^~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <ucred.h>
+/* end */
+
+--------------------
+
+have_header: checking for net/if_dl.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+/* end */
+
+--------------------
+
+have_header: checking for arpa/nameser.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+/* end */
+
+--------------------
+
+have_header: checking for resolv.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+/* end */
+
+--------------------
+
+have_header: checking for pthread.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+/* end */
+
+--------------------
+
+have_header: checking for sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct sockaddr.sa_len in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:48: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct sockaddr*)0)->sa_len - (char *)0;
+                                               ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct sockaddr*)0)->sa_len - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct sockaddr_in.sin_len in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct sockaddr_in*)0)->sin_len - (char *)0;
+                                                   ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct sockaddr_in*)0)->sin_len - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct sockaddr_in6.sin6_len in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct sockaddr_in6*)0)->sin6_len - (char *)0;
+                                                     ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct sockaddr_in6*)0)->sin6_len - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_type: checking for struct sockaddr_un in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct sockaddr_un conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct sockaddr_un.sun_len in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct sockaddr_un*)0)->sun_len - (char *)0;
+                                                   ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct sockaddr_un*)0)->sun_len - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_type: checking for struct sockaddr_dl in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct sockaddr_dl conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct sockaddr_storage in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct sockaddr_storage conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct addrinfo in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct addrinfo conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for socklen_t in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef socklen_t conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+check_socklen: checking RSTRING_SOCKLEN... -------------------- RSTRING_LENINT
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:20: error: 'conftest_const' declared as an array with a negative size
+int conftest_const[(sizeof(socklen_t) >= sizeof(long)) ? 1 : -1];
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int conftest_const[(sizeof(socklen_t) >= sizeof(long)) ? 1 : -1];
+/* end */
+
+--------------------
+
+have_type: checking for struct in_pktinfo in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: #if defined(IPPROTO_IP) && defined(IP_PKTINFO)
+30: typedef struct in_pktinfo conftest_type;
+31: int conftestval[sizeof(conftest_type)?1:-1];
+32: #else
+33: #error
+34: >>>>>> no in_pktinfo <<<<<<
+35: #endif
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct in_pktinfo.ipi_spec_dst in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:56: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct in_pktinfo*)0)->ipi_spec_dst - (char *)0;
+                                                       ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct in_pktinfo*)0)->ipi_spec_dst - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_type: checking for struct in6_pktinfo in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: #if defined(IPPROTO_IPV6) && defined(IPV6_PKTINFO)
+30: typedef struct in6_pktinfo conftest_type;
+31: int conftestval[sizeof(conftest_type)?1:-1];
+32: #else
+33: #error
+34: >>>>>> no in6_pktinfo <<<<<<
+35: #endif
+/* end */
+
+--------------------
+
+have_type: checking for struct sockcred in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:30:17: error: invalid application of 'sizeof' to an incomplete type 'conftest_type' (aka 'struct sockcred')
+int conftestval[sizeof(conftest_type)?1:-1];
+                ^     ~~~~~~~~~~~~~~~
+conftest.c:29:16: note: forward declaration of 'struct sockcred'
+typedef struct sockcred conftest_type;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct sockcred conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct cmsgcred in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:30:17: error: invalid application of 'sizeof' to an incomplete type 'conftest_type' (aka 'struct cmsgcred')
+int conftestval[sizeof(conftest_type)?1:-1];
+                ^     ~~~~~~~~~~~~~~~
+conftest.c:29:16: note: forward declaration of 'struct cmsgcred'
+typedef struct cmsgcred conftest_type;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct cmsgcred conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct ip_mreq in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct ip_mreq conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct ip_mreqn in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct ip_mreqn conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_type: checking for struct ipv6_mreq in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct ipv6_mreq conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct msghdr.msg_control in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:51: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct msghdr*)0)->msg_control - (char *)0;
+                                                  ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct msghdr*)0)->msg_control - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct msghdr.msg_accrights in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:39: error: no member named 'msg_accrights' in 'struct msghdr'
+int s = (char *)&((struct msghdr*)0)->msg_accrights - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~  ^
+conftest.c:29:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct msghdr*)0)->msg_accrights - (char *)0;
+                                                    ^ ~~~~~~~~~
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct msghdr*)0)->msg_accrights - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_type: checking for struct tcp_info in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:30:17: error: invalid application of 'sizeof' to an incomplete type 'conftest_type' (aka 'struct tcp_info')
+int conftestval[sizeof(conftest_type)?1:-1];
+                ^     ~~~~~~~~~~~~~~~
+conftest.c:29:16: note: forward declaration of 'struct tcp_info'
+typedef struct tcp_info conftest_type;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef struct tcp_info conftest_type;
+30: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_library: checking for t_open("", 0, (struct t_info *)NULL) in -lnsl... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lnsl  -lpthread  "
+conftest.c:40:30: error: call to undeclared function 't_open'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+int t(void) { char s1[1024]; t_open(s1, 0, (struct t_info *)NULL); return 0; }
+                             ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; t_open(s1, 0, (struct t_info *)NULL); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for socket(0,0,0) in -lsocket... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -lsocket  -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: library 'socket' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { socket(0,0,0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for socket(0,0,0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { socket(0,0,0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sendmsg(0, (struct msghdr *)NULL, 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { sendmsg(0, (struct msghdr *)NULL, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for recvmsg(0, (struct msghdr *)NULL, 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { recvmsg(0, (struct msghdr *)NULL, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for freehostent((struct hostent *)NULL) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { freehostent((struct hostent *)NULL); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for freeaddrinfo((struct addrinfo *)NULL) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { freeaddrinfo((struct addrinfo *)NULL); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for gai_strerror(0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { gai_strerror(0); return 0; }
+/* end */
+
+--------------------
+
+checking for gai_strerror() returns const pointer... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:32:22: error: read-only variable is not assignable
+    *gai_strerror(0) = 0;
+    ~~~~~~~~~~~~~~~~ ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: #include <stdlib.h>
+29: void
+30: conftest_gai_strerror_is_const()
+31: {
+32:     *gai_strerror(0) = 0;
+33: }
+/* end */
+
+--------------------
+
+have_func: checking for accept4() in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:39:57: error: use of undeclared identifier 'accept4'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))accept4; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: int t(void) { void ((*volatile p)()); p = (void ((*)()))accept4; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: Undefined symbols:
+  _accept4, referenced from:
+      _t in conftest-0595d3.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: extern void accept4();
+40: int t(void) { accept4(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for inet_ntop(0, (const void *)0, (char *)0, 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { inet_ntop(0, (const void *)0, (char *)0, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for inet_pton(0, "", (void *)0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; inet_pton(0, s1, (void *)0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getservbyport(0, "") in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; getservbyport(0, s1); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getifaddrs((struct ifaddrs **)NULL) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { getifaddrs((struct ifaddrs **)NULL); return 0; }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct if_data.ifi_vhid in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:29:40: error: no member named 'ifi_vhid' in 'struct if_data'
+int s = (char *)&((struct if_data*)0)->ifi_vhid - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~  ^
+conftest.c:29:49: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((struct if_data*)0)->ifi_vhid - (char *)0;
+                                                ^ ~~~~~~~~~
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: int s = (char *)&((struct if_data*)0)->ifi_vhid - (char *)0;
+30: int main(int argc, char **argv)
+31: {
+32:   return !!argv[argc];
+33: }
+/* end */
+
+--------------------
+
+have_func: checking for getpeereid() in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: int t(void) { void ((*volatile p)()); p = (void ((*)()))getpeereid; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for getpeerucred(0, (ucred_t **)NULL) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:40:15: error: call to undeclared function 'getpeerucred'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+int t(void) { getpeerucred(0, (ucred_t **)NULL); return 0; }
+              ^
+conftest.c:40:42: error: expected expression
+int t(void) { getpeerucred(0, (ucred_t **)NULL); return 0; }
+                                         ^
+conftest.c:40:32: error: use of undeclared identifier 'ucred_t'
+int t(void) { getpeerucred(0, (ucred_t **)NULL); return 0; }
+                               ^
+3 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { getpeerucred(0, (ucred_t **)NULL); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for if_indextoname(0, "") in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; if_indextoname(0, s1); return 0; }
+/* end */
+
+--------------------
+
+checking for declaration of if_indextoname()... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:28:5: error: conflicting types for 'if_indextoname'
+int if_indextoname(void);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/if.h:450:18: note: previous declaration is here
+char            *if_indextoname(unsigned int, char *);
+                 ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: int if_indextoname(void);
+/* end */
+
+--------------------
+
+have_func: checking for if_nametoindex("") in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; if_nametoindex(s1); return 0; }
+/* end */
+
+--------------------
+
+checking for declaration of if_nametoindex()... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:28:5: error: conflicting types for 'if_nametoindex'
+int if_nametoindex(void);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/if.h:449:18: note: previous declaration is here
+unsigned int     if_nametoindex(const char *);
+                 ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: int if_nametoindex(void);
+/* end */
+
+--------------------
+
+have_func: checking for hsterror() in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:39:57: error: use of undeclared identifier 'hsterror'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))hsterror; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: int t(void) { void ((*volatile p)()); p = (void ((*)()))hsterror; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: Undefined symbols:
+  _hsterror, referenced from:
+      _t in conftest-152cdf.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: extern void hsterror();
+40: int t(void) { hsterror(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getipnodebyname("", 0, 0, (int *)0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; getipnodebyname(s1, 0, 0, (int *)0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for gethostbyname2("", 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { char s1[1024]; gethostbyname2(s1, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for socketpair(0, 0, 0, 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { socketpair(0, 0, 0, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for gethostname((char *)0, 0) in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: 
+40: int t(void) { gethostname((char *)0, 0); return 0; }
+/* end */
+
+--------------------
+
+checking for ipv6... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #ifndef _WIN32
+ 5: #include <sys/socket.h>
+ 6: #endif
+ 7: int
+ 8: main(void)
+ 9: {
+10:   socket(AF_INET6, SOCK_STREAM, 0);
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+checking for ipv6 type... -------------------- kame
+
+have_macro: checking for IPV6_INRIA_VERSION in netinet/in.h... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+conftest.c:6:3: error: 
+# error
+  ^
+conftest.c:7:1: error: expected identifier or '('
+|:/ === IPV6_INRIA_VERSION undefined === /:|
+^
+2 errors generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <netinet/in.h>
+4: /*top*/
+5: #ifndef IPV6_INRIA_VERSION
+6: # error
+7: |:/ === IPV6_INRIA_VERSION undefined === /:|
+8: #endif
+/* end */
+
+--------------------
+
+have_macro: checking for __KAME__ in netinet/in.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <netinet/in.h>
+4: /*top*/
+5: #ifndef __KAME__
+6: # error
+7: |:/ === __KAME__ undefined === /:|
+8: #endif
+/* end */
+
+--------------------
+
+have_library: checking for -linet6... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread  -linet6  -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+ld: library 'inet6' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+--------------------
+
+have_macro: checking for IPPROTO_IPV6 in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: /*top*/
+28: #ifndef IPPROTO_IPV6
+29: # error
+30: |:/ === IPPROTO_IPV6 undefined === /:|
+31: #endif
+/* end */
+
+--------------------
+
+have_const: checking for AF_UNIX in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef int conftest_type;
+30: conftest_type conftestval = (int)AF_UNIX;
+/* end */
+
+--------------------
+
+have_const: checking for SCM_RIGHTS in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: typedef int conftest_type;
+30: conftest_type conftestval = (int)SCM_RIGHTS;
+/* end */
+
+--------------------
+
+test_recvmsg_with_msg_peek_creates_fds: checking for recvmsg() with MSG_PEEK allocate file descriptors... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+  1: #include "ruby.h"
+  2: 
+  3: #include <sys/types.h>
+  4: #include <netdb.h>
+  5: #include <string.h>
+  6: #include <sys/socket.h>
+  7: #include <netinet/in.h>
+  8: #include <sys/uio.h>
+  9: #include <netinet/in_systm.h>
+ 10: #include <netinet/tcp.h>
+ 11: #include <netinet/tcp_fsm.h>
+ 12: #include <netinet/udp.h>
+ 13: #include <arpa/inet.h>
+ 14: #include <net/ethernet.h>
+ 15: #include <sys/un.h>
+ 16: #include <ifaddrs.h>
+ 17: #include <sys/ioctl.h>
+ 18: #include <sys/sockio.h>
+ 19: #include <net/if.h>
+ 20: #include <sys/param.h>
+ 21: #include <sys/ucred.h>
+ 22: #include <net/if_dl.h>
+ 23: #include <arpa/nameser.h>
+ 24: #include <resolv.h>
+ 25: #include <pthread.h>
+ 26: #include <sched.h>
+ 27: #include <stdlib.h>
+ 28: #include <stdio.h>
+ 29: #include <string.h>
+ 30: #include <sys/types.h>
+ 31: #include <sys/stat.h>
+ 32: #include <sys/socket.h>
+ 33: #include <sys/un.h>
+ 34: #include <unistd.h>
+ 35: 
+ 36: int main(int argc, char *argv[])
+ 37: {
+ 38:     int ps[2], sv[2];
+ 39:     int ret;
+ 40:     ssize_t ss;
+ 41:     int s_fd, r_fd;
+ 42:     struct msghdr s_msg, r_msg;
+ 43:     union {
+ 44:         struct cmsghdr hdr;
+ 45:         char dummy[CMSG_SPACE(sizeof(int))];
+ 46:     } s_cmsg, r_cmsg;
+ 47:     struct iovec s_iov, r_iov;
+ 48:     char s_buf[1], r_buf[1];
+ 49:     struct stat s_statbuf, r_statbuf;
+ 50: 
+ 51:     ret = pipe(ps);
+ 52:     if (ret == -1) { perror("pipe"); exit(EXIT_FAILURE); }
+ 53: 
+ 54:     s_fd = ps[0];
+ 55: 
+ 56:     ret = socketpair(AF_UNIX, SOCK_DGRAM, 0, sv);
+ 57:     if (ret == -1) { perror("socketpair"); exit(EXIT_FAILURE); }
+ 58: 
+ 59:     s_msg.msg_name = NULL;
+ 60:     s_msg.msg_namelen = 0;
+ 61:     s_msg.msg_iov = &s_iov;
+ 62:     s_msg.msg_iovlen = 1;
+ 63:     s_msg.msg_control = &s_cmsg;
+ 64:     s_msg.msg_controllen = CMSG_SPACE(sizeof(int));;
+ 65:     s_msg.msg_flags = 0;
+ 66: 
+ 67:     s_iov.iov_base = &s_buf;
+ 68:     s_iov.iov_len = sizeof(s_buf);
+ 69: 
+ 70:     s_buf[0] = 'a';
+ 71: 
+ 72:     s_cmsg.hdr.cmsg_len = CMSG_LEN(sizeof(int));
+ 73:     s_cmsg.hdr.cmsg_level = SOL_SOCKET;
+ 74:     s_cmsg.hdr.cmsg_type = SCM_RIGHTS;
+ 75:     memcpy(CMSG_DATA(&s_cmsg.hdr), (char *)&s_fd, sizeof(int));
+ 76: 
+ 77:     ss = sendmsg(sv[0], &s_msg, 0);
+ 78:     if (ss == -1) { perror("sendmsg"); exit(EXIT_FAILURE); }
+ 79: 
+ 80:     r_msg.msg_name = NULL;
+ 81:     r_msg.msg_namelen = 0;
+ 82:     r_msg.msg_iov = &r_iov;
+ 83:     r_msg.msg_iovlen = 1;
+ 84:     r_msg.msg_control = &r_cmsg;
+ 85:     r_msg.msg_controllen = CMSG_SPACE(sizeof(int));
+ 86:     r_msg.msg_flags = 0;
+ 87: 
+ 88:     r_iov.iov_base = &r_buf;
+ 89:     r_iov.iov_len = sizeof(r_buf);
+ 90: 
+ 91:     r_buf[0] = '0';
+ 92: 
+ 93:     memset(&r_cmsg, 0xff, CMSG_SPACE(sizeof(int)));
+ 94: 
+ 95:     ss = recvmsg(sv[1], &r_msg, MSG_PEEK);
+ 96:     if (ss == -1) { perror("recvmsg"); exit(EXIT_FAILURE); }
+ 97: 
+ 98:     if (ss != 1) {
+ 99:         fprintf(stderr, "unexpected return value from recvmsg: %ld\n", (long)ss);
+100:         exit(EXIT_FAILURE);
+101:     }
+102:     if (r_buf[0] != 'a') {
+103:         fprintf(stderr, "unexpected return data from recvmsg: 0x%02x\n", r_buf[0]);
+104:         exit(EXIT_FAILURE);
+105:     }
+106: 
+107:     if (r_msg.msg_controllen < CMSG_LEN(sizeof(int))) {
+108:         fprintf(stderr, "unexpected: r_msg.msg_controllen < CMSG_LEN(sizeof(int)) not hold: %ld\n",
+109:                 (long)r_msg.msg_controllen);
+110:         exit(EXIT_FAILURE);
+111:     }
+112:     if (r_cmsg.hdr.cmsg_len < CMSG_LEN(sizeof(int))) {
+113:         fprintf(stderr, "unexpected: r_cmsg.hdr.cmsg_len < CMSG_LEN(sizeof(int)) not hold: %ld\n",
+114:                 (long)r_cmsg.hdr.cmsg_len);
+115:         exit(EXIT_FAILURE);
+116:     }
+117:     memcpy((char *)&r_fd, CMSG_DATA(&r_cmsg.hdr), sizeof(int));
+118: 
+119:     if (r_fd < 0) {
+120:         fprintf(stderr, "negative r_fd: %d\n", r_fd);
+121:         exit(EXIT_FAILURE);
+122:     }
+123: 
+124:     if (r_fd == s_fd) {
+125:         fprintf(stderr, "r_fd and s_fd is same: %d\n", r_fd);
+126:         exit(EXIT_FAILURE);
+127:     }
+128: 
+129:     ret = fstat(s_fd, &s_statbuf);
+130:     if (ret == -1) { perror("fstat(s_fd)"); exit(EXIT_FAILURE); }
+131: 
+132:     ret = fstat(r_fd, &r_statbuf);
+133:     if (ret == -1) { perror("fstat(r_fd)"); exit(EXIT_FAILURE); }
+134: 
+135:     if (s_statbuf.st_dev != r_statbuf.st_dev ||
+136:         s_statbuf.st_ino != r_statbuf.st_ino) {
+137:         fprintf(stderr, "dev/ino doesn't match: s_fd:%ld/%ld r_fd:%ld/%ld\n",
+138:                 (long)s_statbuf.st_dev, (long)s_statbuf.st_ino,
+139:                 (long)r_statbuf.st_dev, (long)r_statbuf.st_ino);
+140:         exit(EXIT_FAILURE);
+141:     }
+142: 
+143:     return EXIT_SUCCESS;
+144: }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. ./conftest
+dev/ino doesn't match: s_fd:0/3809298544881986481 r_fd:310237125/1433
+--------------------
+
+have_func: checking for getnameinfo() in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: int t(void) { void ((*volatile p)()); p = (void ((*)()))getnameinfo; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for getaddrinfo() in sys/types.h,netdb.h,string.h,sys/socket.h,netinet/in.h,sys/uio.h,netinet/in_systm.h,netinet/tcp.h,netinet/tcp_fsm.h,netinet/udp.h,arpa/inet.h,net/ethernet.h,sys/un.h,ifaddrs.h,sys/ioctl.h,sys/sockio.h,net/if.h,sys/param.h,sys/ucred.h,net/if_dl.h,arpa/nameser.h,resolv.h,pthread.h,sched.h... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/types.h>
+ 4: #include <netdb.h>
+ 5: #include <string.h>
+ 6: #include <sys/socket.h>
+ 7: #include <netinet/in.h>
+ 8: #include <sys/uio.h>
+ 9: #include <netinet/in_systm.h>
+10: #include <netinet/tcp.h>
+11: #include <netinet/tcp_fsm.h>
+12: #include <netinet/udp.h>
+13: #include <arpa/inet.h>
+14: #include <net/ethernet.h>
+15: #include <sys/un.h>
+16: #include <ifaddrs.h>
+17: #include <sys/ioctl.h>
+18: #include <sys/sockio.h>
+19: #include <net/if.h>
+20: #include <sys/param.h>
+21: #include <sys/ucred.h>
+22: #include <net/if_dl.h>
+23: #include <arpa/nameser.h>
+24: #include <resolv.h>
+25: #include <pthread.h>
+26: #include <sched.h>
+27: 
+28: /*top*/
+29: extern int t(void);
+30: int main(int argc, char **argv)
+31: {
+32:   if (argc > 1000000) {
+33:     int (* volatile tp)(void)=(int (*)(void))&t;
+34:     printf("%d", (*tp)());
+35:   }
+36: 
+37:   return !!argv[argc];
+38: }
+39: int t(void) { void ((*volatile p)()); p = (void ((*)()))getaddrinfo; return !p; }
+/* end */
+
+--------------------
+
+checking for system getaddrinfo working... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+  1: #include "ruby.h"
+  2: 
+  3: #include <sys/types.h>
+  4: #include <netdb.h>
+  5: #include <string.h>
+  6: #include <sys/socket.h>
+  7: #include <netinet/in.h>
+  8: #include <sys/uio.h>
+  9: #include <netinet/in_systm.h>
+ 10: #include <netinet/tcp.h>
+ 11: #include <netinet/tcp_fsm.h>
+ 12: #include <netinet/udp.h>
+ 13: #include <arpa/inet.h>
+ 14: #include <net/ethernet.h>
+ 15: #include <sys/un.h>
+ 16: #include <ifaddrs.h>
+ 17: #include <sys/ioctl.h>
+ 18: #include <sys/sockio.h>
+ 19: #include <net/if.h>
+ 20: #include <sys/param.h>
+ 21: #include <sys/ucred.h>
+ 22: #include <net/if_dl.h>
+ 23: #include <arpa/nameser.h>
+ 24: #include <resolv.h>
+ 25: #include <pthread.h>
+ 26: #include <sched.h>
+ 27: #include <stdlib.h>
+ 28: 
+ 29: #ifndef EXIT_SUCCESS
+ 30: #define EXIT_SUCCESS 0
+ 31: #endif
+ 32: #ifndef EXIT_FAILURE
+ 33: #define EXIT_FAILURE 1
+ 34: #endif
+ 35: 
+ 36: #ifndef AF_LOCAL
+ 37: #define AF_LOCAL AF_UNIX
+ 38: #endif
+ 39: 
+ 40: int
+ 41: main(void)
+ 42: {
+ 43:   int passive, gaierr, inet4 = 0, inet6 = 0;
+ 44:   struct addrinfo hints, *ai, *aitop;
+ 45:   char straddr[INET6_ADDRSTRLEN], strport[16];
+ 46: #ifdef _WIN32
+ 47:   WSADATA retdata;
+ 48: 
+ 49:   WSAStartup(MAKEWORD(2, 0), &retdata);
+ 50: #endif
+ 51: 
+ 52:   for (passive = 0; passive <= 1; passive++) {
+ 53:     memset(&hints, 0, sizeof(hints));
+ 54:     hints.ai_family = AF_UNSPEC;
+ 55:     hints.ai_protocol = IPPROTO_TCP;
+ 56:     hints.ai_flags = passive ? AI_PASSIVE : 0;
+ 57:     hints.ai_socktype = SOCK_STREAM;
+ 58:     if ((gaierr = getaddrinfo(NULL, "54321", &hints, &aitop)) != 0) {
+ 59:       (void)gai_strerror(gaierr);
+ 60:       goto bad;
+ 61:     }
+ 62:     for (ai = aitop; ai; ai = ai->ai_next) {
+ 63:       if (ai->ai_family == AF_LOCAL) continue;
+ 64:       if (ai->ai_addr == NULL)
+ 65:         goto bad;
+ 66: #if defined(_AIX)
+ 67:       if (ai->ai_family == AF_INET6 && passive) {
+ 68:         inet6++;
+ 69:         continue;
+ 70:       }
+ 71:       ai->ai_addr->sa_len = ai->ai_addrlen;
+ 72:       ai->ai_addr->sa_family = ai->ai_family;
+ 73: #endif
+ 74:       if (ai->ai_addrlen == 0 ||
+ 75:           getnameinfo(ai->ai_addr, ai->ai_addrlen,
+ 76:                       straddr, sizeof(straddr), strport, sizeof(strport),
+ 77:                       NI_NUMERICHOST|NI_NUMERICSERV) != 0) {
+ 78:         goto bad;
+ 79:       }
+ 80:       if (strcmp(strport, "54321") != 0) {
+ 81:         goto bad;
+ 82:       }
+ 83:       switch (ai->ai_family) {
+ 84:       case AF_INET:
+ 85:         if (passive) {
+ 86:           if (strcmp(straddr, "0.0.0.0") != 0) {
+ 87:             goto bad;
+ 88:           }
+ 89:         } else {
+ 90:           if (strcmp(straddr, "127.0.0.1") != 0) {
+ 91:             goto bad;
+ 92:           }
+ 93:         }
+ 94:         inet4++;
+ 95:         break;
+ 96:       case AF_INET6:
+ 97:         if (passive) {
+ 98:           if (strcmp(straddr, "::") != 0) {
+ 99:             goto bad;
+100:           }
+101:         } else {
+102:           if (strcmp(straddr, "::1") != 0) {
+103:             goto bad;
+104:           }
+105:         }
+106:         inet6++;
+107:         break;
+108:       case AF_UNSPEC:
+109:         goto bad;
+110:         break;
+111:       default:
+112:         /* another family support? */
+113:         break;
+114:       }
+115:     }
+116:   }
+117: 
+118:   if (!(inet4 == 0 || inet4 == 2))
+119:     goto bad;
+120:   if (!(inet6 == 0 || inet6 == 2))
+121:     goto bad;
+122: 
+123:   if (aitop)
+124:     freeaddrinfo(aitop);
+125:   return EXIT_SUCCESS;
+126: 
+127:  bad:
+128:   if (aitop)
+129:     freeaddrinfo(aitop);
+130:   return EXIT_FAILURE;
+131: }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. ./conftest
+--------------------
+
+checking for if apple's netinet6/in6.h needs s6_addr patch... -------------------- no
+
+DYLD_LIBRARY_PATH=.:../.. "clang -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 -arch arm64 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <netinet/in.h>
+4: int t(struct in6_addr *addr) {return IN6_IS_ADDR_UNSPECIFIED(addr);}
+/* end */
+
+--------------------
+
+have_func: checking for pthread_create()... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 'pthread_create'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_create; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void pthread_create();
+15: int t(void) { pthread_create(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for pthread_detach()... -------------------- yes
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+conftest.c:14:57: error: use of undeclared identifier 'pthread_detach'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_detach; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))pthread_detach; return !p; }
+/* end */
+
+DYLD_LIBRARY_PATH=.:../.. "clang -o conftest -I../../.ext/include/arm64-darwin23 -I../.././include -I../.././ext/socket -I../.. -I../../. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef -pipe -D__APPLE_USE_RFC_3542 conftest.c  -L. -L../.. -L/usr/local/opt/libyaml/lib -L. -fstack-protector-strong -L/usr/local/opt/libyaml/lib  -arch arm64   -lruby.3.3-static -framework CoreFoundation -ldl -lobjc -lpthread   -lpthread  "
+ld: warning: ignoring duplicate libraries: '-lpthread'
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void pthread_detach();
+15: int t(void) { pthread_detach(); return 0; }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+ 1: #ifndef EXTCONF_H
+ 2: #define EXTCONF_H
+ 3: #define HAVE_SYS_UIO_H 1
+ 4: #define HAVE_NETINET_IN_SYSTM_H 1
+ 5: #define HAVE_NETINET_TCP_H 1
+ 6: #define HAVE_NETINET_TCP_FSM_H 1
+ 7: #define HAVE_NETINET_UDP_H 1
+ 8: #define HAVE_ARPA_INET_H 1
+ 9: #define HAVE_NET_ETHERNET_H 1
+10: #define HAVE_SYS_UN_H 1
+11: #define HAVE_IFADDRS_H 1
+12: #define HAVE_SYS_IOCTL_H 1
+13: #define HAVE_SYS_SOCKIO_H 1
+14: #define HAVE_NET_IF_H 1
+15: #define HAVE_SYS_PARAM_H 1
+16: #define HAVE_SYS_UCRED_H 1
+17: #define HAVE_NET_IF_DL_H 1
+18: #define HAVE_ARPA_NAMESER_H 1
+19: #define HAVE_RESOLV_H 1
+20: #define HAVE_PTHREAD_H 1
+21: #define HAVE_SCHED_H 1
+22: #define HAVE_STRUCT_SOCKADDR_SA_LEN 1
+23: #define HAVE_ST_SA_LEN 1
+24: #define HAVE_STRUCT_SOCKADDR_IN_SIN_LEN 1
+25: #define HAVE_ST_SIN_LEN 1
+26: #define HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN 1
+27: #define HAVE_ST_SIN6_LEN 1
+28: #define HAVE_TYPE_STRUCT_SOCKADDR_UN 1
+29: #define HAVE_STRUCT_SOCKADDR_UN_SUN_LEN 1
+30: #define HAVE_ST_SUN_LEN 1
+31: #define HAVE_TYPE_STRUCT_SOCKADDR_DL 1
+32: #define HAVE_TYPE_STRUCT_SOCKADDR_STORAGE 1
+33: #define HAVE_TYPE_STRUCT_ADDRINFO 1
+34: #define HAVE_TYPE_SOCKLEN_T 1
+35: #define RSTRING_SOCKLEN (socklen_t)RSTRING_LENINT
+36: #define HAVE_TYPE_STRUCT_IN_PKTINFO 1
+37: #define HAVE_STRUCT_IN_PKTINFO_IPI_SPEC_DST 1
+38: #define HAVE_ST_IPI_SPEC_DST 1
+39: #define HAVE_TYPE_STRUCT_IN6_PKTINFO 1
+40: #define HAVE_TYPE_STRUCT_IP_MREQ 1
+41: #define HAVE_TYPE_STRUCT_IP_MREQN 1
+42: #define HAVE_TYPE_STRUCT_IPV6_MREQ 1
+43: #define HAVE_STRUCT_MSGHDR_MSG_CONTROL 1
+44: #define HAVE_ST_MSG_CONTROL 1
+45: #define HAVE_SOCKET 1
+46: #define HAVE_SENDMSG 1
+47: #define HAVE_RECVMSG 1
+48: #define HAVE_FREEHOSTENT 1
+49: #define HAVE_FREEADDRINFO 1
+50: #define HAVE_GAI_STRERROR 1
+51: #define GAI_STRERROR_CONST 1
+52: #define HAVE_INET_NTOP 1
+53: #define HAVE_INET_PTON 1
+54: #define HAVE_GETSERVBYPORT 1
+55: #define HAVE_GETIFADDRS 1
+56: #define HAVE_GETPEEREID 1
+57: #define HAVE_IF_INDEXTONAME 1
+58: #define HAVE_IF_NAMETOINDEX 1
+59: #define HAVE_GETIPNODEBYNAME 1
+60: #define HAVE_GETHOSTBYNAME2 1
+61: #define HAVE_SOCKETPAIR 1
+62: #define HAVE_GETHOSTNAME 1
+63: #define ENABLE_IPV6 1
+64: #define INET6 1
+65: #define HAVE_CONST_AF_UNIX 1
+66: #define HAVE_CONST_SCM_RIGHTS 1
+67: #define HAVE_GETNAMEINFO 1
+68: #define HAVE_GETADDRINFO 1
+69: #define HAVE_PTHREAD_CREATE 1
+70: #define HAVE_PTHREAD_DETACH 1
+71: #endif
+/* end */
+
