@@ -144,31 +144,6 @@ export default function DensityCanvas() {
         if (p.y > h + 10) p.y = -10
       }
 
-      // Render density field (downsampled grid)
-      const gridW = Math.ceil(w / GRID_CELL)
-      const gridH = Math.ceil(h / GRID_CELL)
-
-      for (let gx = 0; gx < gridW; gx++) {
-        for (let gy = 0; gy < gridH; gy++) {
-          const worldX = gx * GRID_CELL + GRID_CELL / 2
-          const worldY = gy * GRID_CELL + GRID_CELL / 2
-
-          let brightness = 0
-          for (let i = 0; i < particles.length; i++) {
-            const ddx = worldX - particles[i].x
-            const ddy = worldY - particles[i].y
-            const d2 = ddx * ddx + ddy * ddy
-            brightness += 1.0 / (d2 + 200)
-          }
-          brightness = Math.min(brightness * 3000, 1)
-
-          if (brightness > 0.02) {
-            ctx.fillStyle = `rgba(20, 90, 165, ${brightness * 0.45})`
-            ctx.fillRect(gx * GRID_CELL, gy * GRID_CELL, GRID_CELL, GRID_CELL)
-          }
-        }
-      }
-
       // Draw particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i]
