@@ -164,7 +164,7 @@ export default function Hero() {
           </button>
 
           <a
-            href="/cv.pdf"
+            href="/Dimple.Sarnaaik.github.io/cv.pdf"
             style={{
               fontFamily: 'var(--font-jetbrains), monospace',
               fontSize: '11px',

@@ -163,7 +163,7 @@ export default function Nav() {
 
             {/* Download CV button */}
             <a
-              href="/cv.pdf"
+              href="/Dimple.Sarnaaik.github.io/cv.pdf"
               style={{
                 fontFamily: 'var(--font-jetbrains), monospace',
                 fontSize: '10px',
@@ -280,7 +280,7 @@ export default function Nav() {
             </button>
           ))}
           <a
-            href="/cv.pdf"
+            href="/Dimple.Sarnaaik.github.io/cv.pdf"
             style={{
               fontFamily: 'var(--font-jetbrains), monospace',
               fontSize: '11px',

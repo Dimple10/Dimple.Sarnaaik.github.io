@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '', // TODO: set to '/Dimple.Sarnaaik.github.io' if this is a project page
+  basePath: '/Dimple.Sarnaaik.github.io',
   trailingSlash: true,
   images: { unoptimized: true },
 }
