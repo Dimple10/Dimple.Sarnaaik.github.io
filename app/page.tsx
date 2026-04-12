@@ -1,11 +1,12 @@
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Research from '@/components/sections/Research'
-import CosmicGallery from '@/components/sections/CosmicGallery'
 import Publications from '@/components/sections/Publications'
 import CV from '@/components/sections/CV'
 import Talks from '@/components/sections/Talks'
 import Interests from '@/components/sections/Interests'
+// CosmicGallery hidden until images are ready — re-add when public/images/ is populated
+// import CosmicGallery from '@/components/sections/CosmicGallery'
 
 export default function Home() {
   return (
@@ -13,7 +14,6 @@ export default function Home() {
       <Hero />
       <About />
       <Research />
-      <CosmicGallery />
       <Publications />
       <CV />
       <Talks />
