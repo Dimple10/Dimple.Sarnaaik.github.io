@@ -5,10 +5,10 @@ import { useState, useEffect, useCallback } from 'react'
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Research', href: '#research' },
+  { label: 'Cosmos', href: '#cosmos' },
   { label: 'Publications', href: '#publications' },
   { label: 'CV', href: '#cv' },
   { label: 'Talks', href: '#talks' },
-  { label: 'Blog', href: '#blog' },
   { label: 'Interests', href: '#interests' },
 ]
 

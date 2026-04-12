@@ -1,11 +1,10 @@
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Research from '@/components/sections/Research'
-import SignalMonitor from '@/components/sections/SignalMonitor'
+import CosmicGallery from '@/components/sections/CosmicGallery'
 import Publications from '@/components/sections/Publications'
 import CV from '@/components/sections/CV'
 import Talks from '@/components/sections/Talks'
-import Blog from '@/components/sections/Blog'
 import Interests from '@/components/sections/Interests'
 
 export default function Home() {
@@ -14,11 +13,10 @@ export default function Home() {
       <Hero />
       <About />
       <Research />
-      <SignalMonitor />
+      <CosmicGallery />
       <Publications />
       <CV />
       <Talks />
-      <Blog />
       <Interests />
     </main>
   )
