@@ -3,6 +3,7 @@ import { DM_Serif_Display, JetBrains_Mono } from 'next/font/google'
 import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import CustomCursor from '@/components/CustomCursor'
+import ViewCounter from '@/components/ViewCounter'
 
 const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default function RootLayout({
         <CustomCursor />
         <Nav />
         {children}
+        <ViewCounter />
       </body>
     </html>
   )

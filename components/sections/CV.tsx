@@ -92,7 +92,10 @@ export default function CV() {
             </div>
 
             <a
-              href="/Dimple.Sarnaaik.github.io/cv.pdf"
+              href="/Dimple.Sarnaaik.github.io/Dimple Sarnaaik.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Dimple_Sarnaaik_CV.pdf"
               style={{
                 fontFamily: 'var(--font-jetbrains), monospace',
                 fontSize: '11px',

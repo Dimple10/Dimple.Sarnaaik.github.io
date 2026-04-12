@@ -161,9 +161,12 @@ export default function Nav() {
               </button>
             ))}
 
-            {/* Download CV button */}
+            {/* Download CV button — place cv.pdf in public/ to enable */}
             <a
-              href="/Dimple.Sarnaaik.github.io/cv.pdf"
+              href="/Dimple.Sarnaaik.github.io/Dimple Sarnaaik.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Dimple_Sarnaaik_CV.pdf"
               style={{
                 fontFamily: 'var(--font-jetbrains), monospace',
                 fontSize: '10px',
@@ -280,7 +283,10 @@ export default function Nav() {
             </button>
           ))}
           <a
-            href="/Dimple.Sarnaaik.github.io/cv.pdf"
+            href="/Dimple.Sarnaaik.github.io/Dimple Sarnaaik.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Dimple_Sarnaaik_CV.pdf"
             style={{
               fontFamily: 'var(--font-jetbrains), monospace',
               fontSize: '11px',
