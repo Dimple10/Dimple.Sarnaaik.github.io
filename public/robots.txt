@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dimple10.github.io/Dimple.Sarnaaik.github.io/sitemap.xml
