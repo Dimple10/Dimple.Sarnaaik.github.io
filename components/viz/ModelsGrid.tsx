@@ -3,51 +3,46 @@
 import { useState } from 'react'
 import { useBreakpoint } from '@/hooks/useBreakpoint'
 
-interface DarkMatterModel {
+interface MassScale {
   id: string
   name: string
-  shortName: string
-  descriptor: string
-  experience: number
+  range: string
+  projects: string[]
   detail: string
 }
 
-const MODELS: DarkMatterModel[] = [
+const SCALES: MassScale[] = [
   {
-    id: 'wimps',
-    name: 'WIMPs',
-    shortName: 'WIMPs',
-    descriptor: 'Weakly Interacting',
-    experience: 0.8,
+    id: 'cluster',
+    name: 'Cluster scales',
+    range: '10¹³–10¹⁵ M☉',
+    projects: ['Galacticus Merger Trees'],
     detail:
-      'I use weak lensing statistics from the Roman Space Telescope to constrain the WIMP mass function. Forward modeling the lensing signal across different WIMP scenarios allows us to distinguish between models at sub-galactic scales.',
+      'At cluster scales, beyond-CDM dark matter models predict distinct halo mass function shapes. My Galacticus calibration work constrains how WDM, IDM, and FDM alter halo abundances from group to cluster mass — providing the top-end anchor for multi-scale merger tree fits.',
   },
   {
-    id: 'fuzzy',
-    name: 'Fuzzy / Ultra-light DM',
-    shortName: 'Fuzzy DM',
-    descriptor: 'Wave-like behavior',
-    experience: 0.75,
+    id: 'galaxy',
+    name: 'Galaxy scales',
+    range: '10¹⁰–10¹³ M☉',
+    projects: ['Galacticus Merger Trees'],
     detail:
-      'Ultra-light axion dark matter suppresses small-scale structure through quantum pressure. I study how this affects merger tree statistics in Galacticus, comparing to the Symphony simulation suite to constrain axion masses.',
+      'Milky Way–mass halos and their satellites are the most extensively mapped regime. I calibrate Galacticus merger tree parameters against the COZMIC N-body suites at this scale, testing how backsplash halo populations and progenitor mass functions differ across CDM and beyond-CDM models.',
   },
   {
-    id: 'sidm',
-    name: 'SIDM',
-    shortName: 'SIDM',
-    descriptor: 'Self-interacting',
-    experience: 0.7,
+    id: 'dwarf',
+    name: 'Dwarf galaxies',
+    range: '10⁷–10¹⁰ M☉',
+    projects: ['Galacticus Merger Trees', 'EDGE Mocks', 'Roman Astrometry'],
     detail:
-      'Self-interacting dark matter creates cored density profiles in halos. My Roman Space Telescope forward modeling pipeline tests SIDM predictions against observed lensing convergence power spectra.',
+      'Dwarf galaxies are where different dark matter candidates diverge most sharply. I study this regime from three angles: calibrating merger tree statistics with Galacticus, building EDGE hydrodynamical simulation mocks for Roman imaging, and forecasting Roman astrometric sensitivity to subhalo populations near the dwarf threshold.',
   },
   {
-    id: 'pbh',
-    name: 'Primordial Black Holes',
-    shortName: 'PBHs',
-    descriptor: 'Compact remnants',
-    experience: 0.5,
+    id: 'subgalactic',
+    name: 'Sub-galactic',
+    range: '>1 M☉',
+    projects: ['Roman Astrometry', 'EDGE Mocks'],
     detail:
-      'Primordial black holes as dark matter candidates can be tested through their gravitational microlensing signatures. I explore how Roman\'s sensitivity enables novel constraints on the PBH mass spectrum.',
+      'Below the classical dwarf scale lies a largely unexplored regime — where CDM predicts abundant subhalos but wave-like and self-interacting models predict suppression. My Roman forward-model pipeline probes this regime via gravitational perturbations of stellar apparent accelerations, while EDGE mocks test SBF signatures in ultra-faint systems.',
   },
 ]
 
@@ -55,7 +50,7 @@ export default function ModelsGrid() {
   const { isMobile } = useBreakpoint()
   const [selected, setSelected] = useState<string | null>(null)
 
-  const selectedModel = MODELS.find((m) => m.id === selected)
+  const selectedScale = SCALES.find((s) => s.id === selected)
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -69,7 +64,7 @@ export default function ModelsGrid() {
           marginBottom: '4px',
         }}
       >
-        DM Models
+        Mass Scales
       </div>
 
       <div
@@ -79,12 +74,12 @@ export default function ModelsGrid() {
           gap: '10px',
         }}
       >
-        {MODELS.map((model) => {
-          const isSelected = selected === model.id
+        {SCALES.map((scale) => {
+          const isSelected = selected === scale.id
           return (
             <button
-              key={model.id}
-              onClick={() => setSelected(isSelected ? null : model.id)}
+              key={scale.id}
+              onClick={() => setSelected(isSelected ? null : scale.id)}
               style={{
                 background: isSelected
                   ? 'rgba(91, 163, 201, 0.06)'
@@ -106,7 +101,7 @@ export default function ModelsGrid() {
                   marginBottom: '4px',
                 }}
               >
-                {model.shortName}
+                {scale.name}
               </div>
               <div
                 style={{
@@ -117,28 +112,23 @@ export default function ModelsGrid() {
                   marginBottom: '10px',
                 }}
               >
-                {model.descriptor}
+                {scale.range}
               </div>
 
-              {/* Experience bar */}
-              <div
-                style={{
-                  height: '2px',
-                  backgroundColor: 'var(--border)',
-                  borderRadius: '1px',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  style={{
-                    height: '100%',
-                    width: `${model.experience * 100}%`,
-                    backgroundColor: isSelected
-                      ? 'var(--gold-bright)'
-                      : 'var(--gold-dim)',
-                    transition: 'background-color 0.2s ease',
-                  }}
-                />
+              {/* Project dots */}
+              <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                {scale.projects.map((p) => (
+                  <div
+                    key={p}
+                    style={{
+                      width: '5px',
+                      height: '5px',
+                      borderRadius: '50%',
+                      backgroundColor: isSelected ? 'var(--gold-bright)' : 'var(--gold-dim)',
+                      transition: 'background-color 0.2s ease',
+                    }}
+                  />
+                ))}
               </div>
             </button>
           )
@@ -146,7 +136,7 @@ export default function ModelsGrid() {
       </div>
 
       {/* Detail panel */}
-      {selectedModel && (
+      {selectedScale && (
         <div
           style={{
             backgroundColor: 'var(--bg-surface)',
@@ -155,17 +145,36 @@ export default function ModelsGrid() {
             transition: 'all 0.3s ease',
           }}
         >
-          <div
-            style={{
-              fontFamily: 'var(--font-jetbrains), monospace',
-              fontSize: '10px',
-              textTransform: 'uppercase',
-              letterSpacing: '3px',
-              color: 'var(--gold-bright)',
-              marginBottom: '10px',
-            }}
-          >
-            {selectedModel.name}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
+            <div
+              style={{
+                fontFamily: 'var(--font-jetbrains), monospace',
+                fontSize: '10px',
+                textTransform: 'uppercase',
+                letterSpacing: '3px',
+                color: 'var(--gold-bright)',
+              }}
+            >
+              {selectedScale.name}
+            </div>
+            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+              {selectedScale.projects.map((p) => (
+                <span
+                  key={p}
+                  style={{
+                    fontFamily: 'var(--font-jetbrains), monospace',
+                    fontSize: '8px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1.5px',
+                    color: 'var(--gold-dim)',
+                    border: '1px solid var(--border)',
+                    padding: '2px 6px',
+                  }}
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
           </div>
           <p
             style={{
@@ -175,7 +184,7 @@ export default function ModelsGrid() {
               margin: 0,
             }}
           >
-            {selectedModel.detail}
+            {selectedScale.detail}
           </p>
         </div>
       )}

@@ -191,7 +191,7 @@ export default function Research() {
                   ))}
                 </div>
 
-                {/* Model tags */}
+                {/* Mass scale tags */}
                 <div
                   style={{
                     display: 'flex',
@@ -200,7 +200,7 @@ export default function Research() {
                     marginBottom: '28px',
                   }}
                 >
-                  {project.models.map((m) => (
+                  {project.massScales.map((m) => (
                     <TagBadge key={m} label={m} variant="muted" />
                   ))}
                 </div>
