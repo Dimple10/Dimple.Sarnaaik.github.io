@@ -26,7 +26,7 @@ const SITE_URL = 'https://dimple10.github.io/Dimple.Sarnaaik.github.io'
 export const metadata: Metadata = {
   title: 'Dimple Sarnaaik | Astrophysics',
   description:
-    'Dimple Sarnaaik — PhD student at USC studying cosmology and dark matter. Research focuses on constraining dark matter models through gravitational lensing, simulations, and forward modeling.',
+    'Dimple Sarnaaik — PhD student at USC and Carnegie Observatories studying dark matter through N-body simulations, semi-analytic modeling, and Roman Space Telescope forecasting.',
   keywords: [
     'Dimple Sarnaaik',
     'astrophysics',
@@ -76,7 +76,7 @@ const personSchema = {
   name: 'Dimple Sarnaaik',
   jobTitle: 'PhD Student, Astrophysics',
   description:
-    'Astrophysics PhD student at the University of Southern California researching dark matter through gravitational lensing and N-body simulations.',
+    'Astrophysics PhD student at the University of Southern California and Carnegie Observatories, advised by Dr. Andrew Benson. Research focuses on beyond-CDM dark matter constraints via merger tree calibration, Roman astrometry, and N-body simulations.',
   affiliation: {
     '@type': 'Organization',
     name: 'University of Southern California',

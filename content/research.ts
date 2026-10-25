@@ -30,14 +30,14 @@ export const researchProjects: ResearchProject[] = [
     id: 'roman-subhalos',
     title: 'Dark Matter Subhalo Detection with Roman Astrometry',
     description:
-      'Building a forward-model pipeline for the Nancy Grace Roman Space Telescope to detect dark matter subhalos through gravitational perturbations of stellar apparent accelerations, forecasting sensitivity across CDM, WDM, and PBH models.',
+      'Building a forward-model pipeline for the Nancy Grace Roman Space Telescope to detect dark matter subhalos through gravitational perturbations of stellar apparent accelerations, forecasting sensitivity to the subhalo mass spectrum across CDM, WDM, and PBH models.',
     longDescription:
       'The number of predicted dark matter subhalos varies dramatically below the dwarf-galaxy scale. I built a forward-model pipeline that propagates subhalo-induced gravitational perturbations into mock Roman astrometric measurements, then recovers the subhalo mass spectrum via MCMC. Longer observation baselines dramatically improve astrometric precision, opening a new window on sub-galactic dark matter structure.',
     techniques: ['Forward Modeling', 'Stellar Astrometry', 'MCMC', 'Gravitational Probes'],
     massScales: ['Dwarf galaxies', 'Sub-galactic (>1 M\u2609)'],
     status: 'active',
     year: 'Fall 2022–Present',
-    group: "Dr. Kris Pardo's Research Group",
+    group: "Roman Space Telescope · USC",
     institution: 'USC',
   },
   {

@@ -6,7 +6,7 @@ import { useBreakpoint } from '@/hooks/useBreakpoint'
 
 const STATS = [
   { label: 'University', value: 'USC' },
-  { label: 'Advisors', value: 'Kris Pardo & Andrew Benson' },
+  { label: 'Advisor', value: 'Andrew Benson' },
   { label: 'Year', value: '5th Year PhD Candidate' },
   { label: 'Location', value: 'Los Angeles, CA' },
 ]
@@ -140,14 +140,14 @@ export default function About() {
                   marginBottom: '20px',
                 }}
               >
-                My primary research is with{' '}
+                My research is advised by{' '}
                 <span style={{ color: 'var(--text-primary)' }}>
                   Dr. Andrew Benson
                 </span>{' '}
                 at Carnegie Observatories, where I develop and calibrate
                 Galacticus — an open-source semi-analytic model of galaxy
                 formation — to beyond-CDM dark matter models using MCMC
-                sampling on large N-body simulation suites.
+                sampling on the COZMIC N-body simulation suites.
               </p>
 
               <p
@@ -158,13 +158,11 @@ export default function About() {
                   marginBottom: '32px',
                 }}
               >
-                I also work with{' '}
-                <span style={{ color: 'var(--text-primary)' }}>
-                  Prof. Kris Pardo
-                </span>{' '}
-                at USC, building forward-modeling pipelines to forecast
-                astrometric weak lensing signatures of dark matter subhalos in
-                mock Nancy Grace Roman Space Telescope data.
+                Alongside this, I&apos;m building a forward-modeling pipeline
+                for the Nancy Grace Roman Space Telescope to detect dark matter
+                subhalos via stellar astrometry, and contributing to mock
+                imaging of EDGE dwarf galaxies for Roman-era surface-brightness
+                fluctuation tests.
               </p>
 
               <div
