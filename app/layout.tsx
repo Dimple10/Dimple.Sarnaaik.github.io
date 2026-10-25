@@ -58,6 +58,15 @@ export const metadata: Metadata = {
     title: 'Dimple Sarnaaik | Astrophysics',
     description: 'PhD student at USC. Dark matter, gravitational lensing, cosmological simulations.',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+    },
+  },
 }
 
 // JSON-LD structured data — helps Google show your site for name searches
